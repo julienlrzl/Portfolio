@@ -31,11 +31,13 @@ Pour installer et lancer ce projet sur votre machine locale, suivez ces étapes 
 
 ```bash
    git clone https://github.com/julienlrzl/Portfolio.git
+```
 
 ```bash
    npm install
+```
 
 ```bash
    npm start
-
+```
 
