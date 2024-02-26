@@ -41,3 +41,8 @@ Pour installer et lancer ce projet sur votre machine locale, suivez ces étapes 
    npm start
 ```
 
+Le projet sera accessible à l'adresse http://localhost:3000.
+
+## Contact
+
+Pour toute question ou suggestion, n'hésitez pas à me contacter à julien.larzul@etu.univ-lyon1.fr.
