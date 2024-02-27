@@ -1,49 +1,38 @@
 .navigation {
-  ul {
+  font-family: $font-1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 43.2px;
+  margin-bottom: 43.2px;
+  padding-left: 70px;
+  padding-right: 70px;
+  color: #000; 
+
+  .navigation-logo {
+    font-weight: 700;
+    font-size: 22px;
+    font-style: normal;
+    line-height: 1.2em;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+  }
+
+  .navigation-links {
     display: flex;
-    margin: 30px;
 
-    a {
+    .nav-link {
+      font-weight: 400;
+      font-style: normal;
+      font-size: 14px;
+      letter-spacing: .04em;
+      line-height: 1em;
       text-decoration: none;
-      padding: 10px;
+      color: #000; 
+      margin-left: 22px;
 
-      li {
-        color: $black;
-        transition: 0.2s;
-        cursor: pointer;
-
-        &:hover {
-          color: $gray;
-        }
-      }
-    }
-
-    .nav-active {
-      position: relative;
-
-      &::after {
-        content: "";
-        height: 4px;
-        width: 0;
-        background: $black;
-        position: absolute;
-        border-radius: 10px;
-        bottom: 0px;
-        left: 50%;
-        transform: translateX(-50%);
-        -webkit-animation: anim 0.3s ease forwards;
-        animation: anim 0.6s ease forwards;
-
-        @-webkit-keyframes anim {
-          to {
-            width: 100%;
-          }
-        }
-        @keyframes anim {
-          to {
-            width: 100%;
-          }
-        }
+      &:hover {
+        color: #b3b3b3;
       }
     }
   }
