@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Navigation from "../components/Navigation";
 import Memoji from "../assets/images/memoji.png";
+import SocialMediaBar from "../components/SocialMediaBar";
 
 const Home = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -12,6 +13,7 @@ const Home = () => {
   const currentTechnologyIndex = useRef(0);
   const currentCharIndex = useRef(0);
   const isDeleting = useRef(false);
+  const isMobile = windowWidth < 768;
 
   useEffect(() => {
     const handleResize = () => {
@@ -155,6 +157,7 @@ const Home = () => {
           repellendus omnis!
         </p>
       </div>
+      {!isMobile && <SocialMediaBar />}
     </div>
   );
 };

@@ -9,6 +9,11 @@
   line-height: 76.5px;
   max-width: 85rem;
   margin: auto;
+
+  @media (max-width: 768px) {
+    font-size: 34px;
+    line-height: 36px;
+  }
 }
 
 .memoji {
@@ -27,7 +32,8 @@
 }
 
 #projects {
-  padding: 50px 0;
+  padding-top: 25px;
+  padding-bottom: 20px;
   padding-left: 100px;
   padding-right: 100px;
 }
@@ -53,3 +59,11 @@
 }
 
 /* END TYPING EFFECT */
+
+@media screen and (max-width: 767px) {
+  #projects {
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
