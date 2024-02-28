@@ -8,20 +8,21 @@
   padding-left: 70px;
   padding-right: 70px;
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
   transition: box-shadow 0.5s ease-in-out;
   background-color: $white;
-  color: #000; 
+  color: #000;
+  top: 0;
 
   .navigation-logo {
     font-weight: 700;
     font-size: 22px;
     font-style: normal;
     line-height: 1.2em;
-    letter-spacing: .02em;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
   }
 
@@ -32,18 +33,23 @@
       font-weight: 400;
       font-style: normal;
       font-size: 14px;
-      letter-spacing: .04em;
+      letter-spacing: 0.04em;
       line-height: 1em;
       text-decoration: none;
-      color: #000; 
+      color: #b3b3b3;
       margin-left: 22px;
 
       &:hover {
-        color: #b3b3b3;
+        color: #000;
       }
     }
   }
 }
+
 .shadow {
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.nav-link.active {
+  color: black !important;
 }

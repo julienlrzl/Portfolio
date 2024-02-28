@@ -6,8 +6,8 @@
 $font-1: "font-1", sans-serif;
 
 $black: #000000;
-$gray:  #b3b3b3;
-$white: rgb(243, 243, 243);
+$gray: #b3b3b3;
+$white: #ffffff;
 
 @mixin verticalCenter {
   display: flex;
@@ -24,8 +24,13 @@ $white: rgb(243, 243, 243);
 body {
   background: $white;
   font-family: $font-1;
-  padding-top: 120px;
 }
 li {
   list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
