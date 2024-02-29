@@ -71,6 +71,15 @@ const Navigation = () => {
         <a href="#contact" className="nav-link" onClick={closeMenu}>
           Contact
         </a>
+        <a
+          href={`${process.env.PUBLIC_URL}cv.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="nav-link"
+          onClick={closeMenu}
+        >
+          Resume
+        </a>
         <span className="nav-link nav-link-divider">|</span>
         <a href="#home">
           <div className="nav-link nav-link-divider">

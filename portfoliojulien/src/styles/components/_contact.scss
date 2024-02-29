@@ -1,8 +1,9 @@
 #contact {
   padding-top: 80px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   padding-left: 100px;
   padding-right: 100px;
+  width: 75%;
 }
 
 @media screen and (max-width: 767px) {
@@ -11,4 +12,23 @@
     padding-left: 50px;
     padding-right: 50px;
   }
+}
+
+.contact-title {
+  font-family: $font-1;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.contact-pre-title {
+  font-family: $font-1;
+  font-weight: 100;
+  font-size: 15px;
+  color: #f68886;
+}
+
+.contact-text {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
