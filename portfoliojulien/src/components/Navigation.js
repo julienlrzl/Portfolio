@@ -6,6 +6,11 @@ const Navigation = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  };
 
   const closeMenu = () => {
     setShowLinks(false);
@@ -81,12 +86,13 @@ const Navigation = () => {
           Resume
         </a>
         <span className="nav-link nav-link-divider">|</span>
-        <a href="#home">
-          <div className="nav-link nav-link-divider">
+        <a href="#home" onClick={toggleTheme}>
+          <div className="nav-link nav-link-divider theme-icon">
             <svg
+              className={`icon-sun ${isDarkTheme ? "icon-hidden" : ""}`}
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 512 512"
               height="1em"
               width="1em"
@@ -94,21 +100,32 @@ const Navigation = () => {
             >
               <path
                 fill="none"
-                stroke-linecap="round"
-                stroke-miterlimit="10"
-                stroke-width="32"
+                strokeLinecap="round"
+                strokeMiterlimit="10"
+                strokeWidth="32"
                 d="M256 48v48m0 320v48m147.08-355.08l-33.94 33.94M142.86 369.14l-33.94 33.94M464 256h-48m-320 0H48m355.08 147.08l-33.94-33.94M142.86 142.86l-33.94-33.94"
               />
-
               <circle
                 cx="256"
                 cy="256"
                 r="80"
                 fill="none"
-                stroke-linecap="round"
-                stroke-miterlimit="10"
-                stroke-width="32"
+                strokeLinecap="round"
+                strokeMiterlimit="10"
+                strokeWidth="32"
               />
+            </svg>
+            <svg
+              className={`icon-moon ${!isDarkTheme ? "icon-hidden" : ""}`}
+              stroke="currentColor"
+              fill="currentColor"
+              strokeWidth="0"
+              viewBox="0 0 512 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M152.62 126.77c0-33 4.85-66.35 17.23-94.77C87.54 67.83 32 151.89 32 247.38 32 375.85 136.15 480 264.62 480c95.49 0 179.55-55.54 215.38-137.85-28.42 12.38-61.8 17.23-94.77 17.23-128.47 0-232.61-104.14-232.61-232.61z"></path>
             </svg>
           </div>
         </a>
