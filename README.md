@@ -2,6 +2,10 @@
 
 Bienvenue sur mon portfolio personnel créé avec React.js. Ce projet est une vitrine de mes compétences en développement web et de mes projets réalisés.
 
+
+![Screen du Portfolio](ScreenPortfolio.png)
+
+
 ## Introduction
 
 Ce portfolio est conçu pour mettre en avant mes projets, mes compétences et mon parcours en tant qu'étudiant ingénieur informatique. Il est développé avec React.js pour développer ma compréhension
