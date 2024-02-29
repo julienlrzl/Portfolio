@@ -3,66 +3,119 @@ import React from "react";
 const About = () => {
   return (
     <div className="main-content">
-      <div id="about" className="container-fluid h-100 d-flex flex-column">
-        <h1>About</h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique
-          expedita iure vero ab veniam autem quo error rem. Eum earum debitis
-          blanditiis sunt eligendi, fuga temporibus, in quos reprehenderit
-          pariatur repellendus aliquam quisquam laudantium magnam exercitationem
-          aliquid nisi consequuntur consequatur sit facere, explicabo porro
-          molestiae natus? Vitae quam asperiores consequatur corporis quia eaque
-          neque perspiciatis dolorem nihil magnam. Mollitia ducimus autem fugit
-          soluta accusantium ipsum incidunt dolorum magnam temporibus, aut saepe
-          natus facilis maiores aspernatur aliquid nisi excepturi neque
-          consequatur deserunt. Saepe quasi, cupiditate reiciendis optio quia
-          sit eos laboriosam tenetur facilis. Recusandae ducimus tempora ipsa
-          aperiam tenetur, animi odio soluta natus voluptate nesciunt amet fuga.
-          Necessitatibus veniam unde hic eos voluptatibus sint magni porro, quo
-          excepturi id doloribus! Reiciendis doloremque dolor ab dolores quasi
-          eius molestiae odio, eos non iusto illo totam esse harum doloribus
-          alias voluptas! Cum corporis obcaecati natus quos deserunt quibusdam
-          quia provident nobis ad, fugiat repellendus quidem nihil adipisci
-          nemo, doloribus accusamus nam placeat doloremque tenetur voluptate.
-          Animi, beatae culpa modi repudiandae fugiat quibusdam eaque tempora
-          quidem nisi dolore assumenda debitis rerum distinctio accusamus, quia
-          obcaecati dolorem ipsa enim inventore quas incidunt id laborum
-          officiis. Eveniet mollitia consequuntur deserunt aliquam illum
-          exercitationem, provident dolorum quos quia sit itaque. Eligendi,
-          natus magnam voluptatibus aspernatur sit nam, veniam harum et
-          inventore similique, ipsum reprehenderit fugiat aut provident dolore
-          voluptatum. Non sed quod rerum unde expedita quaerat dolor eaque totam
-          enim odit dolorum ab iste dolore, obcaecati neque nesciunt vero
-          adipisci quasi optio consequuntur? Odio veritatis reiciendis commodi
-          dolorum rem provident qui ipsa non quibusdam maxime nostrum sint,
-          repudiandae quis enim fugit natus molestias excepturi repellat. Ipsa
-          est magni beatae. Amet officia pariatur temporibus assumenda ullam
-          rerum architecto aliquid veritatis debitis facere esse accusamus
-          doloremque quam recusandae iste ipsam, earum porro et quia beatae
-          minima consequatur nemo hic? Sed, fugit nobis. Illo similique
-          voluptatem eligendi sed tempora nisi magnam officiis culpa optio quasi
-          veniam molestiae, saepe impedit a eaque officia neque odit eius, quas
-          architecto debitis laudantium? Error adipisci illum pariatur similique
-          debitis laboriosam enim ipsa dicta blanditiis odio iusto, quos
-          corporis tempore architecto molestiae nisi, quis itaque, atque est.
-          Fugiat, odit consequatur mollitia, deserunt ipsa consectetur incidunt
-          obcaecati dolor ratione beatae odio, laboriosam eius ut dolore. Sequi
-          incidunt fuga in repellat est debitis quos, sint quis odio. Ratione
-          dolor, sapiente totam quia excepturi molestiae, laborum modi nisi
-          consequuntur voluptates ut quo qui possimus dolorum ea iure provident
-          suscipit consectetur voluptatum dolores animi velit amet. Minima
-          voluptate nulla facilis? Ipsum officiis dolorem accusamus ea eius nemo
-          dignissimos minus animi magnam. Officia omnis quod dolorem laboriosam,
-          ipsam obcaecati tempore, similique unde ut cupiditate reprehenderit
-          nesciunt illo animi vero? Ea illum tempora esse repellendus iusto, ad
-          optio accusantium atque fugit dolor nemo ratione incidunt possimus
-          doloremque ut earum illo voluptatem quam laudantium veritatis aperiam
-          alias quae. Veritatis minima excepturi atque natus nesciunt magnam
-          cupiditate, quas consequatur, dignissimos accusamus dolore. Ea
-          doloremque adipisci assumenda. Nobis libero amet alias reiciendis
-          obcaecati vero debitis delectus natus illum officiis quia, iste magnam
-          repellendus omnis!
-        </p>
+      <div id="about" className="container-fluid h-100 div-about">
+        <div className="col-md-5 div-text-about">
+          {" "}
+          <span className="contact-pre-title">Who I am</span>
+          <h1 className="contact-title space">About</h1>
+          <p>
+            Hi! I'm Julien, a computer science engineering student based in
+            Lyon.
+            <br />
+            <br />
+            My studies helped me to acquire knowledge in computer science. I'm
+            really interested in software development, and I would love to know
+            more about cybersecurity. I'm learning a lot of different
+            programming languages, which allows me to adapt to different tasks
+            today.
+            <br />
+            <br />
+            I am actively seeking a 6-month internship in Geneva, starting in
+            September 2024. Please feel free to contact me if you have any
+            opportunities; I would be delighted to discuss potential
+            collaboration.
+            <br />
+          </p>
+          <div className="space-top">
+            <a
+              href={`${process.env.PUBLIC_URL}cv.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-link"
+            >
+              <button className="contact-button">
+                <span class="button_top">Resume</span>
+              </button>
+            </a>
+          </div>
+        </div>
+        <div className="col-md-7 space-top">
+          <div className="card">
+            <div className="header">
+              <div className="top">
+                <div className="circle">
+                  <span className="red circle2"></span>
+                </div>
+                <div className="circle">
+                  <span className="yellow circle2"></span>
+                </div>
+                <div className="circle">
+                  <span className="green circle2"></span>
+                </div>
+                <div className="title">
+                  <p id="title2">Skills.java</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="code-container">
+              <pre id="code" className="area">
+                <code>
+                  <span style={{ color: "#CB6C1C" }}>public class</span>{" "}
+                  <span style={{ color: "#1790C2" }}>Main</span> {"{"}
+                  <br />
+                  &nbsp;
+                  <span style={{ color: "#CB6C1C" }}>
+                    public static void
+                  </span>{" "}
+                  <span style={{ color: "#2C903D" }}>main</span>(
+                  <span style={{ color: "#1790C2" }}>String[]</span>{" "}
+                  <span style={{ color: "#6A93D7" }}>args</span>) {"{"}
+                  <br />
+                  &nbsp;&nbsp;&nbsp;
+                  <span style={{ color: "#6A93D7" }}>System</span>.
+                  <span style={{ color: "#8DDAF8" }}>out</span>.
+                  <span style={{ color: "#A7EC22" }}>println</span>("Hello World
+                  !");
+                  <br />
+                  <br />
+                  &nbsp;&nbsp;&nbsp;{" "}
+                  <span style={{ color: "#1790C2" }}>String[]</span>{" "}
+                  <span style={{ color: "#F1F202" }}>langages</span> = {"{"}
+                  <br />
+                  &nbsp;&nbsp;&nbsp;"Python",
+                  <br />
+                  &nbsp;&nbsp;&nbsp;"Java",
+                  <br />
+                  &nbsp;&nbsp;&nbsp;"HTML",
+                  <br />
+                  &nbsp;&nbsp;&nbsp;"CSS",
+                  <br />
+                  &nbsp;&nbsp;&nbsp;"JavaScript",
+                  <br />
+                  &nbsp;&nbsp;&nbsp;"SQL",
+                  <br />
+                  &nbsp;&nbsp;&nbsp;"PHP",
+                  <br />
+                  &nbsp;&nbsp;&nbsp;".NET"
+                  <br />
+                  &nbsp;&nbsp;&nbsp;{"}"}
+                  <br />
+                  <br />
+                  &nbsp;&nbsp;&nbsp;
+                  <span style={{ color: "#1790C2" }}>String[]</span>{" "}
+                  <span style={{ color: "#F1F202" }}>technologies</span> = {"{"}
+                  <br />
+                  &nbsp;&nbsp;&nbsp;"Git",
+                  <br />
+                  &nbsp;&nbsp;&nbsp;"React.js",
+                  <br />
+                  &nbsp;&nbsp;&nbsp;{"}"}
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

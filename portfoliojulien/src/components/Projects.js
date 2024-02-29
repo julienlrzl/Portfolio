@@ -4,7 +4,8 @@ const Projects = () => {
   return (
     <div className="main-content">
       <div id="projects" className="container-fluid h-100 d-flex flex-column">
-        <h1>Projects</h1>
+        <span className="contact-pre-title">What I've built</span>
+        <h1 className="contact-title space">Projects</h1>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique
           expedita iure vero ab veniam autem quo error rem. Eum earum debitis
