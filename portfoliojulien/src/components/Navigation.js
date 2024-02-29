@@ -53,7 +53,11 @@ const Navigation = () => {
         showLinks ? "show-nav" : "hide-nav"
       } ${isMobile ? "isMobile" : ""}`}
     >
-      <div className="navigation-logo">Larzul Julien</div>
+      <div className="navigation-logo">
+        <a href="#home" className="nav-link">
+          Larzul Julien
+        </a>
+      </div>
       <div className={`navigation-links ${showLinks ? "show" : ""}`}>
         <a href="#home" className="nav-link" onClick={closeMenu}>
           Home
