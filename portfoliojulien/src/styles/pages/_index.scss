@@ -1,0 +1,27 @@
+.app-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.main-text {
+  font-family: $font-1;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  display: inline;
+  height: auto;
+  letter-spacing: normal;
+  line-height: 76.5px;
+  max-width: 85rem;
+  margin: auto;
+
+  @media (max-width: 768px) {
+    font-size: 34px;
+    line-height: 36px;
+  }
+}

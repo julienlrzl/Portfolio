@@ -1,0 +1,14 @@
+#contact {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+@media screen and (max-width: 767px) {
+  #contact {
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}

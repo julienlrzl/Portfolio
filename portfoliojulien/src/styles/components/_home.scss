@@ -1,0 +1,36 @@
+#home {
+  min-height: 100vh;
+}
+
+.Highlight {
+  color: #f68886;
+}
+
+.memoji {
+  width: 250px;
+  height: auto;
+  object-fit: contain;
+  padding-bottom: 35px;
+}
+
+/* TYPING EFFECT */
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+#typing-effect {
+  font-family: $font-1;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.1em solid black; /* Le curseur simulé */
+  animation: blink-caret 1s step-end infinite;
+}
+
+/* END TYPING EFFECT */

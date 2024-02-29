@@ -62,11 +62,11 @@ const Navigation = () => {
         <a href="#home" className="nav-link" onClick={closeMenu}>
           Home
         </a>
-        <a href="#projects" className="nav-link" onClick={closeMenu}>
-          Projects
-        </a>
         <a href="#about" className="nav-link" onClick={closeMenu}>
           About
+        </a>
+        <a href="#projects" className="nav-link" onClick={closeMenu}>
+          Projects
         </a>
         <a href="#contact" className="nav-link" onClick={closeMenu}>
           Contact
