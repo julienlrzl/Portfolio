@@ -3,7 +3,13 @@
   src: url(../assets/fonts/EuropaRegular.ttf);
 }
 
+@font-face {
+  font-family: "font-2";
+  src: url(../assets/fonts/FiraCode-Regular.ttf);
+}
+
 $font-1: "font-1", sans-serif;
+$font-2: "font-2", sans-serif;
 
 $black: #000000;
 $gray: #b3b3b3;

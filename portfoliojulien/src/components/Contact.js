@@ -17,6 +17,11 @@ const Contact = () => {
             Whether you have a question or just want to say hi, I'll try my best
             to get back to you!
           </p>
+          <a href="mailto:julienlrzl@gmail.com">
+            <button className="contact-button">
+              <span class="button_top">Julien</span>
+            </button>
+          </a>
         </div>
       </div>
       <div className="col-md-2"></div>
