@@ -5,10 +5,126 @@
   padding-right: 100px;
 }
 
+.left {
+  margin-left: 280px;
+}
+
+.down {
+  margin-bottom: 50px;
+}
+
+.rectangle-color {
+  position: relative;
+  border-radius: 3px;
+  width: 305px;
+  height: 330px;
+  background-color: rgb(23, 42, 69);
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.rectangle-color-not {
+  position: relative;
+  width: 305px;
+  height: 330px;
+  background-color: transparent;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20;
+  margin-bottom: 20px;
+}
+
+.rectangle-color:hover {
+  box-shadow: -8px 0px 16px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+}
+
 @media screen and (max-width: 767px) {
   #projects {
     padding-top: 100px;
     padding-left: 50px;
     padding-right: 50px;
   }
+
+  .left {
+    margin-left: 10px;
+  }
+
+  .rectangle-color-not {
+    display: none;
+  }
+}
+
+.svg-container {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+}
+
+.svg-container svg {
+  display: block;
+  height: 50px;
+  width: auto;
+}
+
+.github-projects {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  font-size: 22px;
+  color: #b3b3b3;
+  transition: all 0.3s ease;
+}
+
+.github-projects:hover {
+  color: rgb(0, 202, 249);
+}
+
+.responsive {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 767px) {
+  .responsive {
+    flex-direction: column;
+  }
+}
+
+.title-project {
+  position: absolute;
+  top: 110px;
+  left: 30px;
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(204, 214, 246);
+}
+
+.text-project {
+  text-align: left;
+  line-height: 22.1px;
+  position: absolute;
+  font-family: $font-3;
+  width: 80%;
+  top: 150px;
+  left: 30px;
+  font-size: 17px;
+  font-weight: 100;
+  color: rgb(204, 214, 246);
+}
+
+.footer-project {
+  position: absolute;
+  text-align: left;
+  bottom: 20px;
+  left: 30px;
+  color: rgb(251, 252, 255);
+  font-family: $font-2;
+  font-size: 12px;
+  height: 21px;
 }

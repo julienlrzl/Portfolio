@@ -8,8 +8,14 @@
   src: url(../assets/fonts/FiraCode-Regular.ttf);
 }
 
+@font-face {
+  font-family: "font-3";
+  src: url(../assets/fonts/europa-light-webfont.ttf);
+}
+
 $font-1: "font-1", sans-serif;
 $font-2: "font-2", sans-serif;
+$font-3: "font-3", sans-serif;
 
 $black: #000000;
 $gray: #b3b3b3;
