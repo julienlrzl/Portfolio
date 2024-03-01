@@ -12,24 +12,24 @@ const Projects = () => {
         <h1 className="contact-title space left down">Projects</h1>
         <div className="d-flex flex-column">
           <div className="responsive">
-            <Link to="/Portfolio" className="d-flex flex-column">
-              <div
-                className="col-md-4 rectangle-color d-flex align-items-center justify-content-end"
-                style={{ textAlign: "right" }}
-              >
-                <div className="d-flex flex-row align-items-center">
-                  <div>
-                    <Folder />
-                  </div>
-                  <div>
-                    <a
-                      href="https://github.com/julienlrzl/Portfolio"
-                      className="github-projects"
-                    >
-                      <FontAwesomeIcon icon={faGithub} />
-                    </a>
-                  </div>
+            <div
+              className="col-md-4 rectangle-color d-flex align-items-center justify-content-end"
+              style={{ textAlign: "right" }}
+            >
+              <div className="d-flex flex-row align-items-center">
+                <div>
+                  <Folder />
                 </div>
+                <div>
+                  <a
+                    href="https://github.com/julienlrzl/Portfolio"
+                    className="github-projects"
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                </div>
+              </div>
+              <Link to="/Portfolio" className="d-flex flex-column">
                 <div className="d-flex flex-column">
                   <h1 className="title-project">Portfolio 💼</h1>
                   <p className="text-project">
@@ -38,23 +38,24 @@ const Projects = () => {
                   </p>
                   <span className="footer-project">React.js SCSS</span>
                 </div>
-              </div>
-            </Link>
-            <Link to="/BoutiqueFr" className="d-flex flex-column">
-              <div className="col-md-4 text-center rectangle-color">
-                <div className="d-flex flex-row align-items-center">
-                  <div>
-                    <Folder />
-                  </div>
-                  <div>
-                    <a
-                      href="https://github.com/julienlrzl/PHP_E_Boutique"
-                      className="github-projects"
-                    >
-                      <FontAwesomeIcon icon={faGithub} />
-                    </a>
-                  </div>
+              </Link>
+            </div>
+
+            <div className="col-md-4 text-center rectangle-color">
+              <div className="d-flex flex-row align-items-center">
+                <div>
+                  <Folder />
                 </div>
+                <div>
+                  <a
+                    href="https://github.com/julienlrzl/PHP_E_Boutique"
+                    className="github-projects"
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                </div>
+              </div>
+              <Link to="/BoutiqueFr" className="d-flex flex-column">
                 <div className="d-flex flex-column">
                   <h1 className="title-project">LaBoutiqueFrançaise 🍎</h1>
                   <p className="text-project">
@@ -63,23 +64,24 @@ const Projects = () => {
                   </p>
                   <span className="footer-project">PHP Twig JavaScript</span>
                 </div>
-              </div>
-            </Link>
-            <Link to="/Ptut" className="d-flex flex-column">
-              <div className="col-md-4 text-left rectangle-color">
-                <div className="d-flex flex-row align-items-center">
-                  <div>
-                    <Folder />
-                  </div>
-                  <div>
-                    <a
-                      href="https://github.com/julienlrzl/Projet_Tutore"
-                      className="github-projects"
-                    >
-                      <FontAwesomeIcon icon={faGithub} />
-                    </a>
-                  </div>
+              </Link>
+            </div>
+
+            <div className="col-md-4 text-left rectangle-color">
+              <div className="d-flex flex-row align-items-center">
+                <div>
+                  <Folder />
                 </div>
+                <div>
+                  <a
+                    href="https://github.com/julienlrzl/Projet_Tutore"
+                    className="github-projects"
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                </div>
+              </div>
+              <Link to="/Ptut" className="d-flex flex-column">
                 <div className="d-flex flex-column">
                   <h1 className="title-project">Projet Tutoré 🍿</h1>
                   <p className="text-project">
@@ -88,28 +90,28 @@ const Projects = () => {
                   </p>
                   <span className="footer-project">React.js .NET</span>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
           </div>
           <div className="responsive">
-            <Link to="/Automata" className="d-flex flex-column">
-              <div
-                className="col-md-4 rectangle-color"
-                style={{ textAlign: "right" }}
-              >
-                <div className="d-flex flex-row align-items-center">
-                  <div>
-                    <Folder />
-                  </div>
-                  <div>
-                    <a
-                      href="https://github.com/julienlrzl/Projet-Java-Automates"
-                      className="github-projects"
-                    >
-                      <FontAwesomeIcon icon={faGithub} />
-                    </a>
-                  </div>
+            <div
+              className="col-md-4 rectangle-color"
+              style={{ textAlign: "right" }}
+            >
+              <div className="d-flex flex-row align-items-center">
+                <div>
+                  <Folder />
                 </div>
+                <div>
+                  <a
+                    href="https://github.com/julienlrzl/Projet-Java-Automates"
+                    className="github-projects"
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                </div>
+              </div>
+              <Link to="/Automata" className="d-flex flex-column">
                 <div className="d-flex flex-column">
                   <h1 className="title-project">Cellular Automata 🧑🏽‍💻</h1>
                   <p className="text-project">
@@ -118,15 +120,16 @@ const Projects = () => {
                   </p>
                   <span className="footer-project">Java</span>
                 </div>
-              </div>
-            </Link>
-            <Link to="/Connect4" className="d-flex flex-column">
-              <div className="col-md-4 text-center rectangle-color">
-                <div className="d-flex flex-row align-items-center">
-                  <div>
-                    <Folder />
-                  </div>
+              </Link>
+            </div>
+
+            <div className="col-md-4 text-center rectangle-color">
+              <div className="d-flex flex-row align-items-center">
+                <div>
+                  <Folder />
                 </div>
+              </div>
+              <Link to="/Connect4" className="d-flex flex-column">
                 <div className="d-flex flex-column">
                   <h1 className="title-project">Connect 4 🎲</h1>
                   <p className="text-project">
@@ -135,8 +138,8 @@ const Projects = () => {
                   </p>
                   <span className="footer-project">Java</span>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
             <div className="col-md-4 text-left rectangle-color-not"></div>
           </div>
         </div>
