@@ -1,3 +1,105 @@
 .main {
   min-height: 100vh;
+  margin-top: 120px;
+  margin-left: 100px;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    flex-direction: column;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .contact-title-bis,
+  .puce,
+  .bouton-retour {
+    display: none;
+  }
+}
+
+.title-presentation {
+  margin-top: 30px;
+}
+
+.title-presentation-bis {
+  margin-top: 60px;
+}
+
+.puce {
+  position: relative;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  padding-left: 25px;
+  font-family: $font-2;
+  font-size: 13px;
+  color: black;
+  list-style-type: none;
+}
+
+.puce::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: #f68886;
+  font-size: 14px;
+  line-height: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.github-bis {
+  font-size: 18px;
+  color: black;
+  padding-left: 20px;
+}
+
+.github-bis:hover {
+  color: #f68886;
+}
+
+.slider {
+  width: 800px;
+  margin: auto;
+  position: relative;
+}
+
+.slider-viewport {
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slider-viewport img {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.text-pre {
+  margin-top: 60px;
+  width: 800px;
+  font-family: $font-1;
+  font-size: 16px;
+  line-height: 30px;
+  color: #383e42;
+}
+
+.title-text-pre {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+}
+
+.title-text-pre-space {
+  margin-top: 45px;
+}
+
+.space-bottom {
+  margin-bottom: 50px;
 }
