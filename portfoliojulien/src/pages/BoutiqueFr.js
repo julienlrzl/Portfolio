@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Navigation from "../components/Navigation";
+import Navigationbis from "../components/Navigationbis";
 import Footer from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -18,8 +18,8 @@ const BoutiqueFr = () => {
   };
   return (
     <div className="app-content">
-      <Navigation />
-      <div className="main d-flex flex-row">
+      <Navigationbis />
+      <div className="main">
         <div className="col-md-3">
           <div>
             <a onClick={handleBackClick} className="bouton-retour">

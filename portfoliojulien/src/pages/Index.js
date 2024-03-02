@@ -14,10 +14,12 @@ const Index = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.state?.scrollToProjects) {
-      const projectsSection = document.getElementById("projects");
-      if (projectsSection) {
-        projectsSection.scrollIntoView({ behavior: "smooth" });
+    // Vérifie si l'URL contient une ancre (#)
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location]);

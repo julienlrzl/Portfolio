@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -58,23 +59,23 @@ const Navigation = () => {
       } ${isMobile ? "isMobile" : ""}`}
     >
       <div className="navigation-logo">
-        <a href="#home" className="nav-link">
+        <Link to="/#home" className="nav-link">
           Larzul Julien
-        </a>
+        </Link>
       </div>
       <div className={`navigation-links ${showLinks ? "show" : ""}`}>
-        <a href="#home" className="nav-link" onClick={closeMenu}>
+        <Link to="/#home" className="nav-link" onClick={closeMenu}>
           Home
-        </a>
-        <a href="#about" className="nav-link" onClick={closeMenu}>
+        </Link>
+        <Link to="/#about" className="nav-link" onClick={closeMenu}>
           About
-        </a>
-        <a href="#projects" className="nav-link" onClick={closeMenu}>
+        </Link>
+        <Link to="/#projects" className="nav-link" onClick={closeMenu}>
           Projects
-        </a>
-        <a href="#contact" className="nav-link" onClick={closeMenu}>
+        </Link>
+        <Link to="/#contact" className="nav-link" onClick={closeMenu}>
           Contact
-        </a>
+        </Link>
         <a
           href={`${process.env.PUBLIC_URL}cv.pdf`}
           target="_blank"

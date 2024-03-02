@@ -1,8 +1,8 @@
 .main {
   min-height: 100vh;
-  margin-top: 120px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-top: 15vh;
+  margin-left: 7%;
+  margin-right: 5%;
   display: flex;
   flex-direction: row;
 }
@@ -10,8 +10,9 @@
 @media screen and (max-width: 767px) {
   .main {
     flex-direction: column;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-top: 7vh;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .contact-title-bis,
@@ -62,13 +63,15 @@
 }
 
 .slider {
-  width: 800px;
+  display: flex;
+  justify-content: center;
+  width: 90%;
   margin: auto;
   position: relative;
 }
 
 .slider-viewport {
-  width: 800px;
+  width: 90%;
   height: 400px;
   overflow: hidden;
 }
@@ -82,7 +85,9 @@
 
 .text-pre {
   margin-top: 60px;
-  width: 800px;
+  width: 90%;
+  margin-top: 50px;
+  margin-left: 50px;
   font-family: $font-1;
   font-size: 16px;
   line-height: 30px;
@@ -102,4 +107,26 @@
 
 .space-bottom {
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .slider-viewport img {
+    width: 100%;
+    height: auto;
+  }
+
+  .slider-viewport {
+    height: auto;
+  }
+
+  .text-pre {
+    width: 86%;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 40px;
+  }
+
+  .title-text-pre {
+    margin-bottom: 0;
+  }
 }
