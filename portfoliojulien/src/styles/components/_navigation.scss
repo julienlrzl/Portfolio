@@ -137,6 +137,9 @@
   .show-nav .burgerBar {
     background: transparent;
   }
+  .drapeau {
+    display: none;
+  }
 }
 
 .scrolled {
@@ -163,4 +166,15 @@
 
 .icon-hidden {
   opacity: 0;
+}
+
+.drapeau {
+  width: 18px;
+  height: auto;
+}
+
+.nav-linkbis {
+  margin-left: 15px;
+  font-size: 14px;
+  padding-bottom: 2px;
 }

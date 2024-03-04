@@ -1,29 +1,23 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t, i18n } = useTranslation();
   return (
     <div className="main-content">
       <div id="about" className="container-fluid h-100 div-about">
         <div className="col-md-5 div-text-about">
           {" "}
-          <span className="contact-pre-title">Who I am</span>
-          <h1 className="contact-title space">About</h1>
+          <span className="contact-pre-title">{t("aboutTitle0")}</span>
+          <h1 className="contact-title space">{t("aboutTitle1")}</h1>
           <p>
-            Hi! I'm Julien, a computer science engineering student based in
-            Lyon.
+            {t("aboutText0")}
             <br />
             <br />
-            My studies helped me to acquire knowledge in computer science. I'm
-            really interested in software development, and I would love to know
-            more about cybersecurity. I'm learning a lot of different
-            programming languages, which allows me to adapt to different tasks
-            today.
+            {t("aboutText1")}
             <br />
             <br />
-            I am actively seeking a 6-month internship in Geneva, starting in
-            September 2024. Please feel free to contact me if you have any
-            opportunities; I would be delighted to discuss potential
-            collaboration.
+            {t("aboutText2")}
             <br />
           </p>
           <div className="space-top">
@@ -34,7 +28,7 @@ const About = () => {
               className="nav-link"
             >
               <button className="contact-button">
-                <span class="button_top">Resume</span>
+                <span class="button_top">{t("resume")}</span>
               </button>
             </a>
           </div>

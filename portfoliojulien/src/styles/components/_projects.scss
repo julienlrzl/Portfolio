@@ -128,3 +128,10 @@
   font-size: 12px;
   height: 21px;
 }
+
+@media (max-width: 768px) {
+  .rectangle-color {
+    margin-left: 5%; /* Ajustez selon le besoin */
+    margin-right: 5%; /* Ajustez selon le besoin */
+  }
+}

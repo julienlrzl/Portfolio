@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 import Folder from "./Folder";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t, i18n } = useTranslation();
   return (
     <div className="main-content">
       <div id="projects" className="container-fluid h-100 d-flex flex-column">
-        <span className="contact-pre-title left">What I've built</span>
-        <h1 className="contact-title space left down">Projects</h1>
+        <span className="contact-pre-title left">{t("projectTitle0")}</span>
+        <h1 className="contact-title space left down">{t("projectTitle1")}</h1>
         <div className="d-flex flex-column">
           <div className="responsive">
             <div
@@ -31,11 +33,8 @@ const Projects = () => {
               </div>
               <Link to="/Portfolio" className="d-flex flex-column">
                 <div className="d-flex flex-column">
-                  <h1 className="title-project">Portfolio 💼</h1>
-                  <p className="text-project">
-                    Creation of a personal portfolio website intended to
-                    showcase my skills and completed projects.
-                  </p>
+                  <h1 className="title-project">{t("projecttitle0")} 💼</h1>
+                  <p className="text-project">{t("project0")}</p>
                   <span className="footer-project">React.js SCSS</span>
                 </div>
               </Link>
@@ -57,11 +56,8 @@ const Projects = () => {
               </div>
               <Link to="/BoutiqueFr" className="d-flex flex-column">
                 <div className="d-flex flex-column">
-                  <h1 className="title-project">LaBoutiqueFrançaise 🍎</h1>
-                  <p className="text-project">
-                    A website featuring an e-commerce platform for selling food,
-                    complete with authentication capabilities for users.
-                  </p>
+                  <h1 className="title-project">{t("projecttitle1")} 🍎</h1>
+                  <p className="text-project">{t("project1")}</p>
                   <span className="footer-project">PHP Twig JavaScript</span>
                 </div>
               </Link>
@@ -83,11 +79,8 @@ const Projects = () => {
               </div>
               <Link to="/Ptut" className="d-flex flex-column">
                 <div className="d-flex flex-column">
-                  <h1 className="title-project">Projet Tutoré 🍿</h1>
-                  <p className="text-project">
-                    A website modeled after IMDB, focusing on movie databases
-                    and information.
-                  </p>
+                  <h1 className="title-project">{t("projecttitle2")} 🍿</h1>
+                  <p className="text-project">{t("project2")}</p>
                   <span className="footer-project">React.js .NET</span>
                 </div>
               </Link>
@@ -113,11 +106,8 @@ const Projects = () => {
               </div>
               <Link to="/Automata" className="d-flex flex-column">
                 <div className="d-flex flex-column">
-                  <h1 className="title-project">Cellular Automata 🧑🏽‍💻</h1>
-                  <p className="text-project">
-                    1D cellular automaton in Java and forest fire simulation
-                    with a graphical interface.
-                  </p>
+                  <h1 className="title-project">{t("projecttitle3")} 🧑🏽‍💻</h1>
+                  <p className="text-project">{t("project3")}</p>
                   <span className="footer-project">Java</span>
                 </div>
               </Link>
@@ -131,11 +121,8 @@ const Projects = () => {
               </div>
               <Link to="/Connect4" className="d-flex flex-column">
                 <div className="d-flex flex-column">
-                  <h1 className="title-project">Connect 4 🎲</h1>
-                  <p className="text-project">
-                    Graphical Interface Implementation: Mastering
-                    Object-Oriented Programming through Game Development
-                  </p>
+                  <h1 className="title-project">{t("projecttitle4")} 🎲</h1>
+                  <p className="text-project">{t("project4")}</p>
                   <span className="footer-project">Java</span>
                 </div>
               </Link>

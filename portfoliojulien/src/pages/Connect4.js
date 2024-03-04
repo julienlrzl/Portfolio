@@ -5,8 +5,10 @@ import Footer from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Puis4 from "../assets/images/Puis4.png";
+import { useTranslation } from "react-i18next";
 
 const Connect4 = () => {
+  const { t, i18n } = useTranslation();
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -24,20 +26,20 @@ const Connect4 = () => {
           <div>
             <a onClick={handleBackClick} className="bouton-retour">
               <button className="contact-button">
-                <span class="button_top">Back</span>
+                <span class="button_top">{t("buttonBack")}</span>
               </button>
             </a>
             <div className="d-flex flex-column">
               <span className="contact-pre-title title-presentation">2022</span>
-              <h1 className="contact-title">Connect Four</h1>
+              <h1 className="contact-title">{t("projecttitle4")}</h1>
               <h2 className="contact-title-bis title-presentation-bis">
-                Langages
+                {t("titleleft0")}
               </h2>
               <ul>
                 <li className="puce">Java</li>
               </ul>
               <h2 className="contact-title-bis title-presentation-bis">
-                Contributors
+                {t("titleleft2")}
               </h2>
               <ul>
                 <li className="puce">
@@ -60,32 +62,12 @@ const Connect4 = () => {
             </div>
           </div>
           <div className="text-pre">
-            <h3 className="title-text-pre">Portfolio Project</h3>
-            <p>
-              ChatGPT To enhance my understanding of Java graphical user
-              interfaces, I developed a Connect Four game, guided by specialized
-              documentation provided by my professor. This project allowed me to
-              refine my skills in creating interactive interfaces, showcasing my
-              dedication to learning and mastering Java's GUI capabilities.
-              Through this endeavor, I demonstrated my commitment to advancing
-              my technical skills and exploring new areas of software
-              development.
-            </p>
+            <h3 className="title-text-pre">{t("titlerightC0")}</h3>
+            <p>{t("textrightC0")}</p>
             <h3 className="title-text-pre title-text-pre-space">
-              What it does
+              {t("titleright1")}
             </h3>
-            <p className="space-bottom">
-              In my journey to master graphical user interfaces, I developed a
-              versatile menu within a GUI project, offering users the choice
-              between Player vs. Player and Player vs. Computer game modes. This
-              interactive menu not only facilitates seamless navigation between
-              different gameplay options but also allows users to adjust the
-              difficulty level, return to the main menu, and explore various
-              settings, ensuring a tailored gaming experience. This project
-              underscores my ability to create flexible and user-friendly
-              interfaces, reflecting my dedication to enhancing my programming
-              skills and providing engaging digital experiences.
-            </p>
+            <p className="space-bottom">{t("textrightC1")}</p>
           </div>
         </div>
       </div>

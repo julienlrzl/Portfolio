@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -15,7 +17,9 @@ const Footer = () => {
   }, []);
   return (
     <footer className="footer text-footer">
-      <div className="container">Made while eating 🍓 in Lyon</div>
+      <div className="container">
+        {t("footer0")} 🍓 {t("footer1")}
+      </div>
       {isMobile ? (
         <div className="icon">
           <a

@@ -15,13 +15,24 @@
 
 /* TYPING EFFECT */
 
-@keyframes blink-caret {
+@keyframes blink-caret-light {
   from,
   to {
     border-color: transparent;
   }
   50% {
     border-color: black;
+  }
+}
+
+/* Animation pour le mode sombre */
+@keyframes blink-caret-dark {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
   }
 }
 

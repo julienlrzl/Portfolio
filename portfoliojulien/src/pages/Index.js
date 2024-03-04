@@ -14,7 +14,6 @@ const Index = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Vérifie si l'URL contient une ancre (#)
     if (location.hash) {
       const id = location.hash.replace("#", "");
       const element = document.getElementById(id);
@@ -23,6 +22,18 @@ const Index = () => {
       }
     }
   }, [location]);
+
+  useEffect(() => {
+    if (location.state?.scrollToProjects) {
+      // Assurez-vous que l'ID 'projects' existe sur la section des projets.
+      const projectsSection = document.getElementById("projects");
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    // Ajoutez également une logique pour gérer le changement de l'état lorsqu'il n'est plus nécessaire.
+    // Par exemple, en réinitialisant l'état après le défilement.
+  }, [location, location.state]);
 
   return (
     <div className="app-content">

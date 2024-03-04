@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t, i18n } = useTranslation();
   return (
     <div className="main-content">
       <div
@@ -9,14 +11,9 @@ const Contact = () => {
       >
         <div className="col-md-2"></div>
         <div className="col-md-8">
-          <span className="contact-pre-title">What's next ?</span>
-          <h1 className="contact-title">Get In Touch</h1>
-          <p className="contact-text">
-            Although I'm not currently looking for any new opportunities,
-            because I am too busy to save the world. My inbox is always open.
-            Whether you have a question or just want to say hi, I'll try my best
-            to get back to you!
-          </p>
+          <span className="contact-pre-title">{t("contactTitle0")}</span>
+          <h1 className="contact-title">{t("contactTitle1")}</h1>
+          <p className="contact-text">{t("contactText")}</p>
           <a href="mailto:julienlrzl@gmail.com">
             <button className="contact-button">
               <span class="button_top">Julien</span>

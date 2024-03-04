@@ -1,17 +1,37 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  createContext,
+  useContext,
+} from "react";
 import Memoji from "../assets/images/memoji.png";
+import { useTranslation } from "react-i18next";
+const ThemeContext = createContext();
+export const useTheme = () => useContext(ThemeContext);
 
 const Home = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   // Mettre à jour pour utiliser useState
   const [typingText, setTypingText] = useState("Java");
   const technologies = ["Java", "Python", "React", "Laravel"];
+  const { t, i18n } = useTranslation();
 
   // Utiliser useRef pour les variables qui doivent persister entre les rendus
   const currentTechnologyIndex = useRef(0);
   const currentCharIndex = useRef(0);
   const isDeleting = useRef(false);
   const isMobile = windowWidth < 768;
+  const [isDarkTheme, setIsDarkTheme] = useState(() => {
+    // Initialiser le thème à partir du localStorage ou par défaut à false
+    const storedTheme = localStorage.getItem("theme");
+    return storedTheme ? storedTheme === "0" : false; // '0' pour le mode sombre
+  });
+
+  useEffect(() => {
+    // Mettre à jour le localStorage lorsque le thème change
+    localStorage.setItem("theme", isDarkTheme ? "0" : "1");
+  }, [isDarkTheme]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -70,10 +90,15 @@ const Home = () => {
           <div class="col-md-8 d-flex align-items-center justify-content-center">
             <p>
               <b>
-                What’s up, I’m <span className="Highlight">Student</span>.
-                Currently at Polytech Lyon, studying computer science. Oh, and
-                I'm currently learning
-                <span id="typing-effect" className="Highlight">
+                {t("homeMainTextBeg")}{" "}
+                <span className="Highlight">{t("homeMainTextMid")}</span>
+                {t("homeMainTextEnd")}
+                <span
+                  id="typing-effect"
+                  className={`Highlight ${
+                    isDarkTheme ? "typing-effect-dark" : "typing-effect-light"
+                  }`}
+                >
                   <span> </span>
                   {typingText}
                 </span>

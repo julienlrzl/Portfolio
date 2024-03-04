@@ -5,8 +5,10 @@ import Footer from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import ptutImage from "../assets/images/Ptut.png";
+import { useTranslation } from "react-i18next";
 
 const Ptut = () => {
+  const { t, i18n } = useTranslation();
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -24,14 +26,14 @@ const Ptut = () => {
           <div>
             <a onClick={handleBackClick} className="bouton-retour">
               <button className="contact-button">
-                <span class="button_top">Back</span>
+                <span class="button_top">{t("buttonBack")}</span>
               </button>
             </a>
             <div className="d-flex flex-column">
               <span className="contact-pre-title title-presentation">2023</span>
-              <h1 className="contact-title">Projet Tutoré</h1>
+              <h1 className="contact-title">{t("projecttitle2")}</h1>
               <h2 className="contact-title-bis title-presentation-bis">
-                Langages
+                {t("titleleft0")}
               </h2>
               <ul>
                 <li className="puce">HTML</li>
@@ -41,14 +43,14 @@ const Ptut = () => {
                 <li className="puce">SQL</li>
               </ul>
               <h2 className="contact-title-bis title-presentation-bis">
-                Technologies
+                {t("titleleft1")}
               </h2>
               <ul>
                 <li className="puce">React.js</li>
                 <li className="puce">Git</li>
               </ul>
               <h2 className="contact-title-bis title-presentation-bis">
-                Contributors
+                {t("titleleft2")}
               </h2>
               <ul>
                 <li className="puce">
@@ -90,35 +92,12 @@ const Ptut = () => {
             </div>
           </div>
           <div className="text-pre">
-            <h3 className="title-text-pre">Projet Tutoré Project</h3>
-            <p>
-              My IMDB-inspired project, developed using React.js and a
-              comprehensive film database, demonstrates my journey in learning
-              and applying dynamic web development techniques. It provides a
-              responsive, user-friendly interface for exploring an extensive
-              film library, showcasing my growing skills and enthusiasm for both
-              web technology and the entertainment sector. This endeavor
-              reflects my ongoing commitment to mastering new technologies in
-              the field.
-            </p>
+            <h3 className="title-text-pre">{t("titlerightP0")}</h3>
+            <p>{t("textrightP0")}</p>
             <h3 className="title-text-pre title-text-pre-space">
-              What it does
+              {t("titleright1")}
             </h3>
-            <p className="space-bottom">
-              My project is an advanced film database platform, akin to IMDB,
-              enriched with features like search functionality, auto-completion,
-              and comprehensive film details. It enables users to effortlessly
-              search for movies, offering real-time suggestions through
-              auto-completion linked to the database. Upon selection, it
-              provides a detailed overview, including summaries, trailers, and
-              additional film-related information. Furthermore, it suggests
-              related films based on your search, enhancing the discovery
-              process. This tool combines my growing knowledge in web
-              development with my interest in the entertainment industry,
-              showcasing my ability to integrate complex functionalities for an
-              engaging user experience. The project is fully responsive, making
-              film exploration accessible on any device.
-            </p>
+            <p className="space-bottom">{t("textright1")}</p>
           </div>
         </div>
       </div>

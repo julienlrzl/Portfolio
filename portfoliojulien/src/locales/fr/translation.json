@@ -1,0 +1,62 @@
+{
+  "home": "Accueil",
+  "about": "À propos",
+  "projects": "Projets",
+  "contact": "Contact",
+  "resume": "Curriculum Vitae",
+
+  "homeMainTextBeg": "Salut, je suis un ",
+  "homeMainTextMid": "Étudiant",
+  "homeMainTextEnd": ". Actuellement a Polytech Lyon, j'étudie l'informatique. Ah, et je suis actuellement en train d'apprendre",
+
+  "aboutTitle0": "Qui suis-je",
+  "aboutTitle1": "À Propos",
+  "aboutText0": "Salut ! Je suis Julien, étudiant en ingénierie informatique basé à Lyon.",
+  "aboutText1": "Mes études m'ont aidé à acquérir des connaissances en informatique. Je suis vraiment intéressé par le développement logiciel, et j'aimerais en savoir plus sur la cybersécurité. J'apprends beaucoup de langages de programmation différents, ce qui me permet de m'adapter à diverses tâches aujourd'hui.",
+  "aboutText2": "Je suis activement à la recherche d'un stage de 6 mois à Genève, débutant en septembre 2024. N'hésitez pas à me contacter si vous avez des opportunités ; je serais ravi de discuter d'une potentielle collaboration.",
+
+  "projectTitle0": "Ce que j'ai codé",
+  "projectTitle1": "Projets",
+  "project0": "Création d'un site web portfolio personnel destiné à présenter mes compétences et projets réalisés.",
+  "project1": "Un site web comportant une plateforme de e-commerce pour la vente de nourriture, complète avec des capacités d'authentification pour les utilisateurs.",
+  "project2": "Un site web calqué sur IMDB, se concentrant sur les bases de données et informations de films.",
+  "project3": "Automate cellulaire en 1D en Java et simulation d'incendie de forêt avec une interface graphique.",
+  "project4": "Implémentation d'Interface Graphique : Maîtriser la Programmation Orientée Objet à travers le Développement de Jeu.",
+  "projecttitle0": "Portfolio",
+  "projecttitle1": "La Boutique Française",
+  "projecttitle2": "Projet Tutoré",
+  "projecttitle3": "Automate Cellulaire",
+  "projecttitle4": "Puissance 4",
+
+  "contactTitle0": "Quelle est la suite ?",
+  "contactTitle1": "Entrons en contact",
+  "contactText": "Bien que je ne sois pas actuellement à la recherche de nouvelles opportunités, car je suis trop occupé à sauver le monde, ma boîte de réception reste toujours ouverte. Que vous ayez une question ou que vous vouliez simplement dire bonjour, je ferai de mon mieux pour vous répondre !",
+
+  "footer0": "Réalisé en mangeant des ",
+  "footer1": "à Lyon",
+
+  "buttonBack": "Retour",
+  "titleleft0": "Langages",
+  "titleleft1": "Technologies",
+  "titleleft2": "Contributeurs",
+  "titleright0": "Projet Portfolio",
+  "titleright1": "Ce qu'il fait",
+  "textright0": "Mon portfolio, conçu avec React.js et SCSS, est le témoignage de mon parcours continu dans la maîtrise de nouvelles technologies. Il présente une sélection de mes projets de manière interactive et esthétiquement agréable, démontrant non seulement mes compétences actuelles mais aussi mon engagement à apprendre et à adopter des pratiques de développement web à la pointe. Cette plateforme est à la fois une vitrine de mon travail et une indication de ma croissance continue dans le domaine technologique.",
+  "textright1": "Mon projet est un site web portfolio complet conçu pour présenter mon travail, mes compétences et mon parcours professionnel. Il comporte une présentation détaillée de mes projets, une section 'À propos de moi' qui offre un aperçu de mon voyage personnel et professionnel, et un CV téléchargeable pour un examen plus approfondi de mes références. Les fonctionnalités clés incluent un mode nuit pour une visualisation confortable, une traduction bilingue en français et en anglais pour s'adresser à un public plus large, et une section de contact équipée d'un lien mailto pour une communication facile. Le site web est entièrement responsive, garantissant une expérience fluide sur divers appareils et tailles d'écran.",
+
+  "titlerightB0": "Le projet La Boutique Française",
+  "textrightB0": "Mon projet est une incursion dans le monde de l'e-commerce, se concentrant spécifiquement sur une boutique en ligne de produits alimentaires où les utilisateurs peuvent parcourir et passer des commandes. Développée avec un accent sur les fonctionnalités réelles d'un site d'e-commerce, cette plateforme est construite en utilisant React.js et SCSS. Elle démontre non seulement ma capacité à créer une expérience d'achat conviviale, mais aussi mon engagement continu à apprendre et à appliquer de nouvelles technologies de développement web. À travers ce projet, j'ai acquis une expérience pratique dans l'intégration des fonctionnalités essentielles d'e-commerce, avançant dans mon parcours dans le domaine technologique tout en visant à rendre l'achat de nourriture en ligne aussi intuitif et efficace que possible.",
+  "textrightB1": "Mon projet introduit une plateforme d'e-commerce innovante conçue pour l'achat de nourriture, qui améliore l'expérience utilisateur en permettant la création de comptes pour un shopping personnalisé. Les utilisateurs peuvent se connecter pour ajouter des produits à leur panier, procéder au paiement, et recevoir une facture générée pour leurs commandes. Remarquablement, la plateforme accueille également les utilisateurs invités, leur permettant de passer des commandes sans compte, assurant flexibilité et commodité pour tous les utilisateurs. De plus, une fonctionnalité exclusive de connexion administrateur est intégrée, non pas pour passer des commandes, mais pour accéder à un tableau de bord spécialisé qui affiche toutes les commandes passées. Ici, les administrateurs ont la capacité de confirmer les commandes, rationalisant le processus de gestion. Ce projet ne montre pas seulement ma capacité à développer des fonctionnalités web complexes, mais souligne également mon engagement à apprendre et à mettre en œuvre des pratiques avancées de développement web, offrant un aperçu de mon expertise croissante dans la création de solutions en ligne complètes et centrées sur l'utilisateur.",
+
+  "titlerightP0": "Le projet tutoré",
+  "textrightP0": "Mon projet inspiré par IMDB, développé en utilisant React.js et une base de données de films complète, démontre mon parcours d'apprentissage et d'application des techniques de développement web dynamique. Il fournit une interface réactive et conviviale pour explorer une vaste bibliothèque de films, mettant en avant mes compétences croissantes et mon enthousiasme pour la technologie web et le secteur du divertissement. Cette entreprise reflète mon engagement continu à maîtriser de nouvelles technologies dans le domaine.",
+  "textrightP1": "Mon projet est une plateforme avancée de base de données de films, similaire à IMDB, enrichie de fonctionnalités telles que la fonctionnalité de recherche, l'auto-complétion et des détails complets sur les films. Il permet aux utilisateurs de rechercher des films sans effort, offrant des suggestions en temps réel grâce à l'auto-complétion liée à la base de données. Lors de la sélection, il fournit un aperçu détaillé, incluant des résumés, des bandes-annonces et des informations supplémentaires liées aux films. De plus, il suggère des films connexes en fonction de votre recherche, améliorant le processus de découverte. Cet outil combine mes connaissances croissantes en développement web avec mon intérêt pour l'industrie du divertissement, démontrant ma capacité à intégrer des fonctionnalités complexes pour une expérience utilisateur engageante. Le projet est entièrement réactif, rendant l'exploration de films accessible sur n'importe quel appareil.",
+
+  "titlerightA0": "Projet Automates",
+  "textrightA0": "Pour améliorer mes compétences en Java et ma compréhension des interfaces graphiques, j'ai participé à un projet collaboratif qui impliquait le développement d'une simulation d'incendie de forêt et d'un automate cellulaire 1D. Ce projet nous a permis d'explorer des paramètres variables dans la simulation d'incendies de forêt et de personnaliser les règles pour l'automate cellulaire, offrant une approche pratique pour apprendre les capacités de l'interface graphique de Java et l'implémentation d'algorithmes. Ce fut une expérience précieuse dans l'application de Java pour créer des simulations significatives et interactives, démontrant notre capacité collective à relever des défis de programmation complexes.",
+  "textrightA1": "Dans notre projet, nous avons développé un menu offrant le choix entre deux simulations : un automate cellulaire 1D où les utilisateurs peuvent sélectionner la règle et la liste initiale pour générer l'automate correspondant, et une simulation d'incendie de forêt. Pour la simulation d'incendie de forêt, une fenêtre de configuration initiale permet aux utilisateurs de configurer tous les paramètres, tels que la direction du vent et le nombre de feux initiaux. Ce projet a été conçu pour approfondir notre compréhension de Java et de ses interfaces graphiques, fournissant une application pratique de ces concepts à travers des simulations interactives qui défient et améliorent nos compétences en programmation.",
+
+  "titlerightC0": "Projet Puissance 4",
+  "textrightC0": "Pour améliorer ma compréhension des interfaces graphiques utilisateur en Java, j'ai développé un jeu de Puissance Quatre, guidé par la documentation spécialisée fournie par mon professeur. Ce projet m'a permis de peaufiner mes compétences dans la création d'interfaces interactives, démontrant mon engagement à apprendre et à maîtriser les capacités de l'interface graphique de Java. À travers cette entreprise, j'ai démontré mon engagement à faire avancer mes compétences techniques et à explorer de nouveaux domaines du développement logiciel.",
+  "textrightC1": "Dans ma quête pour maîtriser les interfaces graphiques utilisateur, j'ai développé un menu polyvalent dans un projet d'interface graphique, offrant aux utilisateurs le choix entre les modes de jeu Joueur contre Joueur et Joueur contre Ordinateur. Ce menu interactif facilite non seulement une navigation fluide entre différentes options de jeu, mais permet également aux utilisateurs d'ajuster le niveau de difficulté, de revenir au menu principal et d'explorer divers réglages, assurant une expérience de jeu personnalisée. Ce projet souligne ma capacité à créer des interfaces flexibles et conviviales, reflétant mon engagement à améliorer mes compétences en programmation et à fournir des expériences digitales engageantes."
+}
