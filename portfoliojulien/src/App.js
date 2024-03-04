@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Portfolio from "./pages/Portfolio.js";
+import Portfoliojulien from "./pages/Portfoliojulien.js";
 import BoutiqueFr from "./pages/BoutiqueFr.js";
 import Ptut from "./pages/Ptut.js";
 import Automata from "./pages/Automata.js";
@@ -13,7 +13,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Index />} />
-        <Route path="/Portfolio" element={<Portfolio />} />
+        <Route path="/Portfoliojulien" element={<Portfoliojulien />} />
         <Route path="/BoutiqueFr" element={<BoutiqueFr />} />
         <Route path="/Ptut" element={<Ptut />} />
         <Route path="/Automata" element={<Automata />} />

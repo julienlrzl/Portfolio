@@ -31,7 +31,7 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
-              <Link to="/Portfolio" className="d-flex flex-column">
+              <Link to="/Portfoliojulien" className="d-flex flex-column">
                 <div className="d-flex flex-column">
                   <h1 className="title-project">{t("projecttitle0")} 💼</h1>
                   <p className="text-project">{t("project0")}</p>

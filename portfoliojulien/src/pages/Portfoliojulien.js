@@ -7,7 +7,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import portfolioImage from "../assets/images/Portfolio.png";
 import { useTranslation } from "react-i18next";
 
-const Portfolio = () => {
+const Portfoliojulien = () => {
   const { t, i18n } = useTranslation();
   let navigate = useNavigate();
 
@@ -85,4 +85,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Portfoliojulien;
