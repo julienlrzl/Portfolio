@@ -17,7 +17,7 @@ const Footer = () => {
   }, []);
   return (
     <footer className="footer text-footer">
-      <div className="container">
+      <div className="container straw">
         {t("footer0")} 🍓 {t("footer1")}
       </div>
       {isMobile ? (
