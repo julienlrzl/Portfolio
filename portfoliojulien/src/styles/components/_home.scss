@@ -11,6 +11,8 @@
   height: auto;
   object-fit: contain;
   padding-bottom: 35px;
+  position: absolute; // Rendre l'image de memoji fixe si nécessaire
+  right: 35px;
 }
 
 /* TYPING EFFECT */
