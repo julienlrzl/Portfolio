@@ -101,7 +101,7 @@ const Navigation = () => {
           {t("contact")}
         </Link>
         <a
-          href={`${process.env.PUBLIC_URL}cv.pdf`}
+          href={"/cv.pdf"}
           target="_blank"
           rel="noopener noreferrer"
           className="nav-link"
