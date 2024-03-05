@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Portfolio/portfoliojulien/static/css/main.c65987bf.css",
+    "main.js": "/Portfolio/portfoliojulien/static/js/main.7167d6bb.js",
+    "static/media/Boutiquefr.png": "/Portfolio/portfoliojulien/static/media/Boutiquefr.4273e11431be82582ae7.png",
+    "static/media/Auto.png": "/Portfolio/portfoliojulien/static/media/Auto.d207c1cb5d665b252ce2.png",
+    "static/media/Puis4.png": "/Portfolio/portfoliojulien/static/media/Puis4.e974a79c1e76d3c6de2f.png",
+    "static/media/Portfolio.png": "/Portfolio/portfoliojulien/static/media/Portfolio.c837fe19d5a32f978edc.png",
+    "static/media/FiraCode-Regular.ttf": "/Portfolio/portfoliojulien/static/media/FiraCode-Regular.dbd175e33b712ffcd71c.ttf",
+    "static/media/Ptut.png": "/Portfolio/portfoliojulien/static/media/Ptut.3d64ecb07a476ca076c0.png",
+    "static/media/memoji.png": "/Portfolio/portfoliojulien/static/media/memoji.9fc873a44e6641e34e2d.png",
+    "static/media/europa-light-webfont.ttf": "/Portfolio/portfoliojulien/static/media/europa-light-webfont.d66543a9ebdebb6dfcea.ttf",
+    "static/media/EuropaRegular.ttf": "/Portfolio/portfoliojulien/static/media/EuropaRegular.6f7af97cfd0baa472939.ttf",
+    "index.html": "/Portfolio/portfoliojulien/index.html",
+    "main.c65987bf.css.map": "/Portfolio/portfoliojulien/static/css/main.c65987bf.css.map",
+    "main.7167d6bb.js.map": "/Portfolio/portfoliojulien/static/js/main.7167d6bb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c65987bf.css",
+    "static/js/main.7167d6bb.js"
+  ]
+}
