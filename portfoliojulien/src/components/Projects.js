@@ -12,10 +12,10 @@ const Projects = () => {
       <div id="projects" className="container-fluid h-100 d-flex flex-column">
         <span className="contact-pre-title left">{t("projectTitle0")}</span>
         <h1 className="contact-title space left down">{t("projectTitle1")}</h1>
-        <div className="d-flex flex-column">
+        <div className="">
           <div className="responsive">
             <div
-              className="col-md-4 rectangle-color d-flex align-items-center justify-content-end"
+              className="col-md-4 rectangle-color"
               style={{ textAlign: "right" }}
             >
               <div className="d-flex flex-row align-items-center">

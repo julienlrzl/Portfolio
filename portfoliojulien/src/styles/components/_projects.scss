@@ -5,6 +5,13 @@
   padding-right: 100px;
 }
 
+.responsive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
 .left {
   margin-left: 280px;
 }
@@ -24,8 +31,6 @@
   margin-bottom: 20px;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.3);
-  left: 15px;
-  right: 15px;
 }
 
 .rectangle-color-not {
@@ -36,8 +41,6 @@
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 20px;
-  left: 15px;
-  right: 15px;
 }
 
 .rectangle-color:hover {
@@ -84,12 +87,6 @@
 
 .github-projects:hover {
   color: rgb(0, 202, 249);
-}
-
-.responsive {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
 }
 
 @media screen and (max-width: 767px) {
