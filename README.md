@@ -1,7 +1,11 @@
 # Portfolio
 
 Bienvenue sur mon portfolio personnel créé avec React.js. Ce projet est une vitrine de mes compétences en développement web et de mes projets réalisés.  
+<<<<<<< HEAD
 Accès à mon Portfolio 💿 : https://larzuljulien.com
+=======
+Accès au Portfolio 💿 : https://larzuljulien.com
+>>>>>>> dbdc1df86b06baff2fdc87c6727221bae45d1a63
 
 
 ![Screen du Portfolio](ScreenPortfolio.png)
