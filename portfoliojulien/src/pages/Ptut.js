@@ -95,9 +95,9 @@ const Ptut = () => {
             <h3 className="title-text-pre">{t("titlerightP0")}</h3>
             <p>{t("textrightP0")}</p>
             <h3 className="title-text-pre title-text-pre-space">
-              {t("titlerightP1")}
+              {t("titleright1")}
             </h3>
-            <p className="space-bottom">{t("textright1")}</p>
+            <p className="space-bottom">{t("textrightP1")}</p>
           </div>
         </div>
       </div>
