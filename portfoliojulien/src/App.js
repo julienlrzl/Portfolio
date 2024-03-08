@@ -8,11 +8,13 @@ import Ptut from "./pages/Ptut.js";
 import Automata from "./pages/Automata.js";
 import Connect4 from "./pages/Connect4.js";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Analytics />
+      <SpeedInsights />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/Portfoliojulien" element={<Portfoliojulien />} />
