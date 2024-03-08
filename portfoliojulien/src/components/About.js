@@ -28,7 +28,7 @@ const About = () => {
               className="nav-link"
             >
               <button className="contact-button">
-                <span class="button_top">{t("resume")}</span>
+                <span class="button_top">{t("btnresume")}</span>
               </button>
             </a>
           </div>
