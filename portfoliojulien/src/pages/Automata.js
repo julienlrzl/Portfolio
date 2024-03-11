@@ -58,7 +58,7 @@ const Automata = () => {
                   </a>
                 </li>
                 <li className="puce">
-                  Cédric Monprivé
+                  Cédric Momprivé
                   <a href="https://github.com/Majriche" className="github-bis">
                     <FontAwesomeIcon icon={faGithub} />
                   </a>
