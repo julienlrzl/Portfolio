@@ -7,6 +7,7 @@ import BoutiqueFr from "./pages/BoutiqueFr.js";
 import Ptut from "./pages/Ptut.js";
 import Automata from "./pages/Automata.js";
 import Connect4 from "./pages/Connect4.js";
+import Sokoban from "./pages/Sokoban.js";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/Ptut" element={<Ptut />} />
         <Route path="/Automata" element={<Automata />} />
         <Route path="/Connect4" element={<Connect4 />} />
+        <Route path="/Sokoban" element={<Sokoban />} />
       </Routes>
     </BrowserRouter>
   );

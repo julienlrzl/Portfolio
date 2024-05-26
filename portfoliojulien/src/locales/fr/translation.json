@@ -23,11 +23,13 @@
   "project2": "Un site web calqué sur IMDB, se concentrant sur les bases de données et informations de films.",
   "project3": "Automate cellulaire en 1D en Java et simulation d'incendie de forêt avec une interface graphique.",
   "project4": "Implémentation d'Interface Graphique : Maîtriser la Programmation Orientée Objet à travers le Développement de Jeu.",
+  "project5": "Apprentissage de la modularité : Maîtriser la modularité d'un projet en utilisant le pattern Observer.",
   "projecttitle0": "Portfolio",
   "projecttitle1": "La Boutique française",
   "projecttitle2": "Projet tutoré",
   "projecttitle3": "Automate cellulaire",
   "projecttitle4": "Puissance 4",
+  "projecttitle5": "Sokoban",
 
   "contactTitle0": "Écrivez-moi?",
   "contactTitle1": "Entrons en contact",
@@ -59,5 +61,9 @@
 
   "titlerightC0": "Projet Puissance 4",
   "textrightC0": "Pour améliorer ma compréhension des interfaces graphiques utilisateur en Java, j'ai développé un jeu de Puissance Quatre, guidé par la documentation spécialisée fournie par mon professeur. Ce projet m'a permis de peaufiner mes compétences dans la création d'interfaces interactives, démontrant mon engagement à apprendre et à maîtriser les capacités de l'interface graphique de Java. À travers cette entreprise, j'ai démontré mon engagement à faire avancer mes compétences techniques et à explorer de nouveaux domaines du développement logiciel.",
-  "textrightC1": "Dans ma quête pour maîtriser les interfaces graphiques utilisateur, j'ai développé un menu polyvalent dans un projet d'interface graphique, offrant aux utilisateurs le choix entre les modes de jeu Joueur contre Joueur et Joueur contre Ordinateur. Ce menu interactif facilite non seulement une navigation fluide entre différentes options de jeu, mais permet également aux utilisateurs d'ajuster le niveau de difficulté, de revenir au menu principal et d'explorer divers réglages, assurant une expérience de jeu personnalisée. Ce projet souligne ma capacité à créer des interfaces flexibles et conviviales, reflétant mon engagement à améliorer mes compétences en programmation et à fournir des expériences digitales engageantes."
+  "textrightC1": "Dans ma quête pour maîtriser les interfaces graphiques utilisateur, j'ai développé un menu polyvalent dans un projet d'interface graphique, offrant aux utilisateurs le choix entre les modes de jeu Joueur contre Joueur et Joueur contre Ordinateur. Ce menu interactif facilite non seulement une navigation fluide entre différentes options de jeu, mais permet également aux utilisateurs d'ajuster le niveau de difficulté, de revenir au menu principal et d'explorer divers réglages, assurant une expérience de jeu personnalisée. Ce projet souligne ma capacité à créer des interfaces flexibles et conviviales, reflétant mon engagement à améliorer mes compétences en programmation et à fournir des expériences digitales engageantes.",
+
+  "titlerightS0": "Projet Sokoban",
+  "textrightS0": "Pour approfondir ma compréhension de la modularité en Java, j'ai développé un jeu de Sokoban, guidé par les conseils de mon professeur. Ce projet, réalisé à Polytech Lyon, m'a permis de peaufiner mes compétences dans la création de logiciels modulaires, démontrant mon engagement à apprendre et à maîtriser les bonnes pratiques de développement logiciel. À travers ce projet, j'ai illustré mon engagement à améliorer mes compétences techniques et à explorer de nouveaux domaines du développement logiciel.",
+  "textrightS1": "L'objectif principal était de structurer le code de manière modulaire, permettant une maintenance facile et des améliorations futures. Le jeu offre une interface graphique intuitive où les joueurs peuvent naviguer à travers différents niveaux et réinitialiser des parties. Ce projet démontre ma capacité à concevoir des logiciels robustes et modulaires, tout en renforçant mes compétences en ingénierie logicielle et en programmation orientée objet."
 }

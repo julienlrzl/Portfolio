@@ -127,7 +127,31 @@ const Projects = () => {
                 </div>
               </Link>
             </div>
+            <div className="col-md-4 text-center rectangle-color">
+              <div className="d-flex flex-row align-items-center">
+                <div>
+                  <Folder />
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/julienlrzl/Sokoban"
+                    className="github-projects"
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                </div>
+              </div>
+              <Link to="/Sokoban" className="d-flex flex-column">
+                <div className="d-flex flex-column">
+                  <h1 className="title-project">{t("projecttitle5")} 👾</h1>
+                  <p className="text-project">{t("project5")}</p>
+                  <span className="footer-project">Java</span>
+                </div>
+              </Link>
+            </div>
+            {/*
             <div className="col-md-4 text-left rectangle-color-not"></div>
+            */}
           </div>
         </div>
       </div>

@@ -23,11 +23,13 @@
   "project2": "A website modeled after IMDB, focusing on movie databases and information.",
   "project3": "1D cellular automaton in Java and forest fire simulation with a graphical interface.",
   "project4": "Graphical Interface Implementation: Mastering Object-oriented programming through game development.",
+  "project5": "Learning Modularity: Mastering project modularity using the Observer pattern.",
   "projecttitle0": "Portfolio",
   "projecttitle1": "The French Shop",
   "projecttitle2": "Tutored Project",
   "projecttitle3": "Cellular Automata",
   "projecttitle4": "Connect 4",
+  "projecttitle5": "Sokoban",
 
   "contactTitle0": "What's next?",
   "contactTitle1": "Let’s get in touch",
@@ -59,5 +61,9 @@
 
   "titlerightC0": "Connect 4 Project",
   "textrightC0": "To enhance my understanding of Java graphical user interfaces, I developed a Connect Four game, guided by specialized documentation provided by my professor. This project allowed me to refine my skills in creating interactive interfaces, showcasing my dedication to learning and mastering Java's GUI capabilities. Through this endeavor, I demonstrated my commitment to advancing my technical skills and exploring new areas of software development.",
-  "textrightC1": "In my journey to master graphical user interfaces, I developed a versatile menu within a GUI project, offering users the choice between Player vs. Player and Player vs. Computer game modes. This interactive menu not only facilitates seamless navigation between different gameplay options but also allows users to adjust the difficulty level, return to the main menu, and explore various settings, ensuring a tailored gaming experience. This project underscores my ability to create flexible and user-friendly interfaces, reflecting my dedication to enhancing my programming skills and providing engaging digital experiences."
+  "textrightC1": "In my journey to master graphical user interfaces, I developed a versatile menu within a GUI project, offering users the choice between Player vs. Player and Player vs. Computer game modes. This interactive menu not only facilitates seamless navigation between different gameplay options but also allows users to adjust the difficulty level, return to the main menu, and explore various settings, ensuring a tailored gaming experience. This project underscores my ability to create flexible and user-friendly interfaces, reflecting my dedication to enhancing my programming skills and providing engaging digital experiences.",
+
+  "titlerightS0": "Sokoban Project",
+  "textrightS0": "To deepen my understanding of modularity in Java, I developed a Sokoban game, guided by the advice of my professor. This project, undertaken at Polytech Lyon, allowed me to refine my skills in creating modular software, demonstrating my commitment to learning and mastering good software development practices. Through this project, I have illustrated my dedication to improving my technical skills and exploring new areas of software development.",
+  "textrightS1": "The main objective was to structure the code in a modular way, allowing for easy maintenance and future enhancements. The game offers an intuitive graphical interface where players can navigate through different levels and reset games. This project demonstrates my ability to design robust and modular software, while also enhancing my skills in software engineering and object-oriented programming."
 }
