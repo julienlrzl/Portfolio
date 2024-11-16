@@ -102,7 +102,9 @@ const About = () => {
                   <br />
                   &nbsp;&nbsp;&nbsp;"Git",
                   <br />
-                  &nbsp;&nbsp;&nbsp;"React.js",
+                  &nbsp;&nbsp;&nbsp;"AWS",
+                  <br />
+                  &nbsp;&nbsp;&nbsp;"React.js"
                   <br />
                   &nbsp;&nbsp;&nbsp;{"}"}
                 </code>
