@@ -149,6 +149,36 @@ const Projects = () => {
                 </div>
               </Link>
             </div>
+          </div>
+          <div className="responsive">
+            <div
+              className="col-md-4 rectangle-color"
+              style={{ textAlign: "right" }}
+            >
+              <div className="d-flex flex-row align-items-center">
+                <div>
+                  <Folder />
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/julienlrzl/Projet_Metaheuristiques"
+                    className="github-projects"
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                </div>
+              </div>
+              <Link to="/Metaheuristic" className="d-flex flex-column">
+                <div className="d-flex flex-column">
+                  <h1 className="title-project">{t("projecttitle6")} 🧩</h1>
+                  <p className="text-project">{t("project6")}</p>
+                  <span className="footer-project">Python</span>
+                </div>
+              </Link>
+            </div>
+
+            <div className="col-md-4 text-left rectangle-color-not"></div>
+            <div className="col-md-4 text-left rectangle-color-not"></div>
             {/*
             <div className="col-md-4 text-left rectangle-color-not"></div>
             */}

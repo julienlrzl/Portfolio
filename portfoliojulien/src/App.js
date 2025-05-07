@@ -8,6 +8,7 @@ import Ptut from "./pages/Ptut.js";
 import Automata from "./pages/Automata.js";
 import Connect4 from "./pages/Connect4.js";
 import Sokoban from "./pages/Sokoban.js";
+import Metaheuristic from "./pages/Metaheuristic.js";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/Automata" element={<Automata />} />
         <Route path="/Connect4" element={<Connect4 />} />
         <Route path="/Sokoban" element={<Sokoban />} />
+        <Route path="/Metaheuristic" element={<Metaheuristic />} />
       </Routes>
     </BrowserRouter>
   );

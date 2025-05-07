@@ -13,8 +13,8 @@ export const useTheme = () => useContext(ThemeContext);
 const Home = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   // Mettre à jour pour utiliser useState
-  const [typingText, setTypingText] = useState("Java");
-  const technologies = ["Java", "Python", "React", "Laravel"];
+  const [typingText, setTypingText] = useState("Jakarta EE (Servlets)");
+  const technologies = ["Jakarta EE (Servlets)", "Metaheuristics", "Cryptography", "Neural Networks", "PostgreSQL", "Multivariate Analysis"];
   const { t, i18n } = useTranslation();
 
   // Utiliser useRef pour les variables qui doivent persister entre les rendus
@@ -45,31 +45,29 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
+    let isCancelled = false;
+  
     const type = () => {
-      // Cycle through the technology array
+      if (isCancelled) return;
+  
       const currentIdx = currentTechnologyIndex.current;
       const currentTechnology = technologies[currentIdx];
       let part = currentTechnology.slice(0, currentCharIndex.current);
-
+  
+      setTypingText(part);
+  
       if (isDeleting.current) {
-        setTypingText(part);
         currentCharIndex.current -= 1;
       } else {
-        setTypingText(part);
         currentCharIndex.current += 1;
       }
-
-      if (
-        !isDeleting.current &&
-        currentCharIndex.current === currentTechnology.length
-      ) {
-        // Start deleting after a pause
+  
+      if (!isDeleting.current && currentCharIndex.current === currentTechnology.length) {
         setTimeout(() => {
           isDeleting.current = true;
           type();
         }, 1500);
       } else if (isDeleting.current && currentCharIndex.current === 0) {
-        // Move to the next word after a pause
         isDeleting.current = false;
         currentTechnologyIndex.current = (currentIdx + 1) % technologies.length;
         setTimeout(type, 1000);
@@ -77,8 +75,12 @@ const Home = () => {
         setTimeout(type, isDeleting.current ? 150 : 500);
       }
     };
-
+  
     type();
+  
+    return () => {
+      isCancelled = true;
+    };
   }, []);
 
   const imageStyle = windowWidth < 768 ? { display: "none" } : {};
