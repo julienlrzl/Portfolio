@@ -24,12 +24,14 @@
   "project3": "1D cellular automaton in Java and forest fire simulation with a graphical interface.",
   "project4": "Graphical Interface Implementation: Mastering Object-oriented programming through game development.",
   "project5": "Learning Modularity: Mastering project modularity using the Observer pattern.",
+  "project6": "Solving the knapsack problem in Python using metaheuristic algorithms to optimize item selection.",
   "projecttitle0": "Portfolio",
   "projecttitle1": "The French Shop",
   "projecttitle2": "Tutored Project",
   "projecttitle3": "Cellular Automata",
   "projecttitle4": "Connect 4",
   "projecttitle5": "Sokoban",
+  "projecttitle6": "Metaheuristics",
 
   "contactTitle0": "What's next?",
   "contactTitle1": "Let’s get in touch",
@@ -65,5 +67,9 @@
 
   "titlerightS0": "Sokoban Project",
   "textrightS0": "To deepen my understanding of modularity in Java, I developed a Sokoban game, guided by the advice of my professor. This project, undertaken at Polytech Lyon, allowed me to refine my skills in creating modular software, demonstrating my commitment to learning and mastering good software development practices. Through this project, I have illustrated my dedication to improving my technical skills and exploring new areas of software development.",
-  "textrightS1": "The main objective was to structure the code in a modular way, allowing for easy maintenance and future enhancements. The game offers an intuitive graphical interface where players can navigate through different levels and reset games. This project demonstrates my ability to design robust and modular software, while also enhancing my skills in software engineering and object-oriented programming."
+  "textrightS1": "The main objective was to structure the code in a modular way, allowing for easy maintenance and future enhancements. The game offers an intuitive graphical interface where players can navigate through different levels and reset games. This project demonstrates my ability to design robust and modular software, while also enhancing my skills in software engineering and object-oriented programming.",
+
+  "titlerightM0": "The Knapsack Project",
+  "textrightM0": "As part of my learning in optimization techniques, I carried out a Python project focused on solving the knapsack problem. The goal was to develop and compare several metaheuristic algorithms in order to find effective solutions to this classic combinatorial problem. I implemented methods such as Tabu Search, Genetic Algorithms, and Simulated Annealing. This project allowed me to deeply explore how these approaches work and perform on various datasets, while strengthening my skills in algorithm design and data structure handling with Python.",
+  "textrightM1": "This project, carried out as part of a discrete optimization course, aimed to compare different metaheuristics applied to the knapsack problem. The objective was to analyze several methods by measuring their execution time, the quality of the solutions obtained, and the influence of various parameters. The results were organized into graphs and tables to assess the effectiveness of each approach and identify the most suitable methods depending on the situation."
 }
