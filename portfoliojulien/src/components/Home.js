@@ -66,13 +66,13 @@ const Home = () => {
         setTimeout(() => {
           isDeleting.current = true;
           type();
-        }, 1500);
+        }, 300);
       } else if (isDeleting.current && currentCharIndex.current === 0) {
         isDeleting.current = false;
         currentTechnologyIndex.current = (currentIdx + 1) % technologies.length;
-        setTimeout(type, 1000);
+        setTimeout(type, 300);
       } else {
-        setTimeout(type, isDeleting.current ? 150 : 500);
+        setTimeout(type, isDeleting.current ? 70 : 120);
       }
     };
   

@@ -39,6 +39,10 @@
       text-decoration: none;
       color: #b3b3b3;
       margin-left: 22px;
+
+      &:hover {
+        color: #8a8a8a; 
+      }
     }
   }
 }
@@ -146,6 +150,10 @@
   background-color: #222;
   color: white;
   min-height: 25px;
+}
+
+body.dark-mode .navigation-links .nav-link:hover {
+  color: #e0e0e0;
 }
 
 .theme-icon {
