@@ -4,6 +4,7 @@ import Folder from "./Folder";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
+import ProjectButton from "./ProjectButton";
 
 const Projects = () => {
   const { t, i18n } = useTranslation();
@@ -31,13 +32,12 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
-              <Link to="/Portfoliojulien" className="d-flex flex-column">
                 <div className="d-flex flex-column">
                   <h1 className="title-project">{t("projecttitle0")} 💼</h1>
                   <p className="text-project">{t("project0")}</p>
                   <span className="footer-project">React.js SCSS</span>
                 </div>
-              </Link>
+              <ProjectButton to="/Portfoliojulien" />
             </div>
 
             <div className="col-md-4 text-center rectangle-color">
@@ -54,13 +54,12 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
-              <Link to="/BoutiqueFr" className="d-flex flex-column">
                 <div className="d-flex flex-column">
                   <h1 className="title-project">{t("projecttitle1")} 🍎</h1>
                   <p className="text-project">{t("project1")}</p>
                   <span className="footer-project">PHP Twig JavaScript</span>
                 </div>
-              </Link>
+              <ProjectButton to="/BoutiqueFr" />
             </div>
 
             <div className="col-md-4 text-left rectangle-color">
@@ -77,13 +76,12 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
-              <Link to="/Ptut" className="d-flex flex-column">
                 <div className="d-flex flex-column">
                   <h1 className="title-project">{t("projecttitle2")} 🍿</h1>
                   <p className="text-project">{t("project2")}</p>
                   <span className="footer-project">React.js .NET</span>
                 </div>
-              </Link>
+              <ProjectButton to="/Ptut" />
             </div>
           </div>
           <div className="responsive">
@@ -104,13 +102,12 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
-              <Link to="/Automata" className="d-flex flex-column">
                 <div className="d-flex flex-column">
                   <h1 className="title-project">{t("projecttitle3")} 🧑🏽‍💻</h1>
                   <p className="text-project">{t("project3")}</p>
                   <span className="footer-project">Java</span>
                 </div>
-              </Link>
+              <ProjectButton to="/Automata" />
             </div>
 
             <div className="col-md-4 text-center rectangle-color">
@@ -119,13 +116,12 @@ const Projects = () => {
                   <Folder />
                 </div>
               </div>
-              <Link to="/Connect4" className="d-flex flex-column">
                 <div className="d-flex flex-column">
                   <h1 className="title-project">{t("projecttitle4")} 🎲</h1>
                   <p className="text-project">{t("project4")}</p>
                   <span className="footer-project">Java</span>
                 </div>
-              </Link>
+              <ProjectButton to="/Connect4" />
             </div>
             <div className="col-md-4 text-center rectangle-color">
               <div className="d-flex flex-row align-items-center">
@@ -141,13 +137,12 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
-              <Link to="/Sokoban" className="d-flex flex-column">
                 <div className="d-flex flex-column">
                   <h1 className="title-project">{t("projecttitle5")} 👾</h1>
                   <p className="text-project">{t("project5")}</p>
                   <span className="footer-project">Java</span>
                 </div>
-              </Link>
+              <ProjectButton to="/Sokoban" />
             </div>
           </div>
           <div className="responsive">
@@ -168,13 +163,12 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
-              <Link to="/Metaheuristic" className="d-flex flex-column">
                 <div className="d-flex flex-column">
                   <h1 className="title-project">{t("projecttitle6")} 🧩</h1>
                   <p className="text-project">{t("project6")}</p>
                   <span className="footer-project">Python</span>
                 </div>
-              </Link>
+              <ProjectButton to="/Metaheuristic" />
             </div>
 
             <div className="col-md-4 text-left rectangle-color-not"></div>
