@@ -14,7 +14,15 @@ const Home = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   // Mettre à jour pour utiliser useState
   const [typingText, setTypingText] = useState("Jakarta EE (Servlets)");
-  const technologies = ["Jakarta EE (Servlets)", "Metaheuristics", "Cryptography", "Neural Networks", "PostgreSQL", "Multivariate Analysis"];
+  const technologies = [
+    "Python",
+    "PostgreSQL",
+    "Kibana",
+    "Docker",
+    "Forensics",
+    "IoT",
+    "Cryptographie",
+  ];
   const { t, i18n } = useTranslation();
 
   // Utiliser useRef pour les variables qui doivent persister entre les rendus
@@ -46,23 +54,26 @@ const Home = () => {
 
   useEffect(() => {
     let isCancelled = false;
-  
+
     const type = () => {
       if (isCancelled) return;
-  
+
       const currentIdx = currentTechnologyIndex.current;
       const currentTechnology = technologies[currentIdx];
       let part = currentTechnology.slice(0, currentCharIndex.current);
-  
+
       setTypingText(part);
-  
+
       if (isDeleting.current) {
         currentCharIndex.current -= 1;
       } else {
         currentCharIndex.current += 1;
       }
-  
-      if (!isDeleting.current && currentCharIndex.current === currentTechnology.length) {
+
+      if (
+        !isDeleting.current &&
+        currentCharIndex.current === currentTechnology.length
+      ) {
         setTimeout(() => {
           isDeleting.current = true;
           type();
@@ -75,9 +86,9 @@ const Home = () => {
         setTimeout(type, isDeleting.current ? 70 : 120);
       }
     };
-  
+
     type();
-  
+
     return () => {
       isCancelled = true;
     };
