@@ -6,7 +6,7 @@ const Navigation = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
@@ -98,15 +98,6 @@ const Navigation = () => {
         </a>
         <a href="#contact" className="nav-link" onClick={closeMenu}>
           {t("contact")}
-        </a>
-        <a
-          href={"/cv.pdf"}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="nav-link"
-          onClick={closeMenu}
-        >
-          {t("resume")}
         </a>
         <span className="nav-link nav-link-divider">|</span>
         <a
