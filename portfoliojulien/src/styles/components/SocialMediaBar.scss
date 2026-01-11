@@ -2,9 +2,10 @@
   position: fixed;
   bottom: 15px;
   right: 20px;
-  display: flex; /* Utilisation de flexbox */
-  flex-direction: column; /* Orientation des éléments en colonne */
-  align-items: center; /* Centrage horizontal des éléments */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: bottom 0.15s ease-out;
 }
 
 .icon-bar a {

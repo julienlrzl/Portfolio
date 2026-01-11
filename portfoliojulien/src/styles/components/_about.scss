@@ -21,6 +21,12 @@
   margin-top: 25px;
 }
 
+.about-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
 /* CODE PAGE */
 
 .card {

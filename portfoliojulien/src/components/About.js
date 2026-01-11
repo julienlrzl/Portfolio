@@ -20,15 +20,23 @@ const About = () => {
             {t("aboutText2")}
             <br />
           </p>
-          <div className="space-top">
+          <div className="space-top about-buttons">
             <a
-              href={"/cv.pdf"}
+              href="https://tryhackme.com/p/julienlrzl"
               target="_blank"
               rel="noopener noreferrer"
-              className="nav-link"
             >
               <button className="contact-button">
-                <span class="button_top">{t("btnresume")}</span>
+                <span className="button_top">TryHackMe</span>
+              </button>
+            </a>
+            <a
+              href="https://www.root-me.org/julien_lrzl?lang=fr#dce7c2e7d4bad52dc829e500ce0aac5c"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="contact-button">
+                <span className="button_top">Root-me</span>
               </button>
             </a>
           </div>

@@ -4,7 +4,7 @@
   "projects": "Projects",
   "contact": "Contact",
   "resume": "CV",
-  "btnresume": "Curriculum Vitæ",
+  "btnresume": "Curriculum Vitae",
 
   "homeMainTextBeg": "Hi there! I am ",
   "homeMainTextMid": "future engineer ",
@@ -14,7 +14,7 @@
   "aboutTitle1": "About me",
   "aboutText0": "It is a pleasure to meet you! My name is Julien and I am a future computer engineer, currently pursuing a double degree between France and Canada.",
   "aboutText1": "I specialize in cybersecurity. My studies and projects have allowed me to explore various aspects of the field such as system security, data protection, digital forensics, incident management, and the Internet of Things. Curious and motivated, I enjoy expanding my knowledge and applying it in practical contexts.",
-  "aboutText2": "Since the 2025–2026 academic year, I have been studying at the Université du Québec à Chicoutimi (UQAC) as part of a double degree in cybersecurity. I am currently seeking an internship starting in July 2026 to put my information security skills into practice and actively contribute to innovative projects.",
+  "aboutText2": "Since the 2025-2026 academic year, I have been studying at the Universite du Quebec a Chicoutimi (UQAC) as part of a double degree in cybersecurity. I am currently seeking an internship starting in July 2026 to put my information security skills into practice and actively contribute to innovative projects.",
 
   "projectTitle0": "What I have coded",
   "projectTitle1": "Projects",
@@ -34,8 +34,17 @@
   "projecttitle6": "Metaheuristics",
 
   "contactTitle0": "What's next?",
-  "contactTitle1": "Let’s get in touch",
-  "contactText": "If you have heard about an opportunity that suits what I am looking for, please let me know. Wether you have a question or just want to say « Hi », My inbox is always open.  I will get back to you as soon as possible!",
+  "contactTitle1": "Get in touch",
+  "contactText": "If you are looking for an intern or have heard about an opportunity that matches what I am seeking, feel free to let me know. Whether you have a question or just want to say hi, my inbox is always open. I will get back to you as soon as possible!",
+
+  "formName": "Your name",
+  "formEmail": "Your email",
+  "formMessage": "Your message",
+  "formSubmit": "Send",
+  "formSending": "Sending...",
+  "formSent": "Message sent!",
+  "formError": "An error occurred. Please try again.",
+  "formNewMessage": "Send another message",
 
   "footer0": "Made while eating ",
   "footer1": "in Lyon",
