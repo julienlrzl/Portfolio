@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Home from "../components/Home";
@@ -7,10 +7,10 @@ import SocialMediaBar from "../components/SocialMediaBar";
 import Footer from "../components/Footer";
 import About from "../components/About";
 import Contact from "../components/Contact";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const Index = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const isMobile = windowWidth < 768;
+  const isMobile = useMediaQuery("(max-width: 767px)");
   const location = useLocation();
 
   useEffect(() => {
@@ -25,15 +25,12 @@ const Index = () => {
 
   useEffect(() => {
     if (location.state?.scrollToProjects) {
-      // Assurez-vous que l'ID 'projects' existe sur la section des projets.
       const projectsSection = document.getElementById("projects");
       if (projectsSection) {
         projectsSection.scrollIntoView({ behavior: "smooth" });
       }
     }
-    // Ajoutez également une logique pour gérer le changement de l'état lorsqu'il n'est plus nécessaire.
-    // Par exemple, en réinitialisant l'état après le défilement.
-  }, [location, location.state]);
+  }, [location.state]);
 
   return (
     <div className="app-content">

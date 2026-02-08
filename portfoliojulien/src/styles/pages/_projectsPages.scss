@@ -35,9 +35,9 @@
   margin-bottom: 10px;
   margin-top: 20px;
   padding-left: 25px;
-  font-family: $font-2;
+  font-family: $font-code;
   font-size: 13px;
-  color: black;
+  color: $black;
   list-style-type: none;
 }
 
@@ -45,7 +45,7 @@
   content: "▹";
   position: absolute;
   left: 0px;
-  color: #f68886;
+  color: $accent;
   font-size: 14px;
   line-height: 12px;
   top: 50%;
@@ -54,12 +54,12 @@
 
 .github-bis {
   font-size: 18px;
-  color: black;
+  color: $black;
   padding-left: 20px;
 }
 
 .github-bis:hover {
-  color: #f68886;
+  color: $accent;
 }
 
 .slider {
@@ -88,7 +88,7 @@
   width: 90%;
   margin-top: 50px;
   margin-left: 50px;
-  font-family: $font-1;
+  font-family: $font-primary;
   font-size: 16px;
   line-height: 30px;
   color: #383e42;
@@ -98,7 +98,7 @@
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: 700;
-  color: black;
+  color: $black;
 }
 
 .title-text-pre-space {

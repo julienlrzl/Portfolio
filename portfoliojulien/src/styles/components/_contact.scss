@@ -7,24 +7,24 @@
 }
 
 .contact-title {
-  font-family: $font-1;
+  font-family: $font-primary;
   font-weight: 700;
   font-size: 24px;
   text-transform: uppercase;
 }
 
 .contact-title-bis {
-  font-family: $font-1;
+  font-family: $font-primary;
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
 }
 
 .contact-pre-title {
-  font-family: $font-1;
+  font-family: $font-primary;
   font-weight: 100;
   font-size: 15px;
-  color: #f68886;
+  color: $accent;
 }
 
 .contact-text {
@@ -33,10 +33,10 @@
 }
 
 .contact-button {
-  font-family: $font-2;
+  font-family: $font-code;
   --button_radius: 0%;
-  --button_color: #fff;
-  --button_outline_color: #000000;
+  --button_color: #{$white};
+  --button_outline_color: #{$black};
   --shadow-color: rgba(0, 0, 0, 0.2);
   --highlight-color: rgba(255, 255, 255, 0.2);
   font-size: 17px;
@@ -87,17 +87,17 @@
 .form-input {
   width: 100%;
   padding: 0.75em 1em;
-  font-family: $font-2;
+  font-family: $font-code;
   font-size: 15px;
-  border: 2px solid #000;
+  border: 2px solid $black;
   border-radius: 0;
-  background: #fff;
-  color: #000;
+  background: $white;
+  color: $black;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
   &:focus {
     outline: none;
-    border-color: #f68886;
+    border-color: $accent;
     box-shadow: 0 0 0 3px rgba(246, 136, 134, 0.2);
   }
 
@@ -112,7 +112,7 @@
 }
 
 .form-error {
-  color: #f68886;
+  color: $accent;
   font-size: 14px;
   margin-top: 1rem;
   text-align: center;
@@ -131,11 +131,11 @@
 .dark-mode {
   .form-input {
     background: #1a1a1a;
-    color: #fff;
+    color: $white;
     border-color: #444;
 
     &:focus {
-      border-color: #f68886;
+      border-color: $accent;
     }
 
     &::placeholder {
@@ -145,7 +145,7 @@
 
   .contact-button {
     --button_color: #1a1a1a;
-    --button_outline_color: #fff;
+    --button_outline_color: #{$white};
   }
 }
 

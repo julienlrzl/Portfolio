@@ -1,25 +1,29 @@
 @font-face {
-  font-family: "font-1";
+  font-family: "font-primary";
   src: url(../assets/fonts/EuropaRegular.ttf);
 }
 
 @font-face {
-  font-family: "font-2";
+  font-family: "font-code";
   src: url(../assets/fonts/FiraCode-Regular.ttf);
 }
 
 @font-face {
-  font-family: "font-3";
+  font-family: "font-light";
   src: url(../assets/fonts/europa-light-webfont.ttf);
 }
 
-$font-1: "font-1", sans-serif;
-$font-2: "font-2", sans-serif;
-$font-3: "font-3", sans-serif;
+$font-primary: "font-primary", sans-serif;
+$font-code: "font-code", sans-serif;
+$font-light: "font-light", sans-serif;
 
 $black: #000000;
 $gray: #b3b3b3;
 $white: #ffffff;
+$accent: #f68886;
+$dark-bg: #121212;
+$card-bg: rgb(23, 42, 69);
+$cyan: rgb(0, 202, 249);
 
 @mixin verticalCenter {
   display: flex;
@@ -35,7 +39,7 @@ $white: #ffffff;
 
 body {
   background: $white;
-  font-family: $font-1;
+  font-family: $font-primary;
   position: relative;
 }
 li {

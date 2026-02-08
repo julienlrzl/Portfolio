@@ -1,14 +1,14 @@
 .dark-mode {
-  background-color: #121212;
-  color: #ffffff;
+  background-color: $dark-bg;
+  color: $white;
 }
 
 .dark-mode .icon-bar::after {
-  background-color: white; /* Couleur en mode sombre */
+  background-color: $white;
 }
 
 .dark-mode .icon-bar a {
-  color: white;
+  color: $white;
 }
 
 .dark-mode .shadow {
@@ -16,34 +16,34 @@
 }
 
 .dark-mode .navigation {
-  background-color: #121212;
+  background-color: $dark-bg;
 }
 
 .dark-mode .navigation-logo {
-  color: #ffffff;
+  color: $white;
 }
 
 .dark-mode .footer {
-  background-color: #121212;
+  background-color: $dark-bg;
   box-shadow: 0 -2px 4px rgba(65, 64, 64, 0.1);
 }
 
 .dark-mode #typing-effect {
-  border-right: 0.1em solid white; /* Le curseur simulé en mode sombre */
+  border-right: 0.1em solid $white;
 }
 
 .dark-mode .puce {
-  color: #ffffff;
+  color: $white;
 }
 
 .dark-mode .github-bis {
-  color: #ffffff;
+  color: $white;
 }
 
 .dark-mode .text-pre {
-  color: #ffffff;
+  color: $white;
 }
 
 .dark-mode .title-text-pre {
-  color: #b3b3b3;
+  color: $gray;
 }

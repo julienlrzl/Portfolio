@@ -1,7 +1,7 @@
 .footer {
   padding: 25px 70px;
-  background-color: #fff;
-  color: #000;
+  background-color: $white;
+  color: $black;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
@@ -16,8 +16,8 @@
 }
 
 .text-footer {
-  color: #b3b3b3;
-  font-family: $font-1;
+  color: $gray;
+  font-family: $font-primary;
   font-style: normal;
   line-height: 1.2em;
   letter-spacing: 0.02em;
@@ -26,27 +26,27 @@
 }
 
 .icon {
-  display: flex; /* Applique flex ici pour aligner les icônes côte à côte */
-  justify-content: center; /* Centre horizontalement le contenu dans le conteneur */
-  align-items: center; /* Centre verticalement le contenu dans le conteneur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon a {
   display: flex;
-  justify-content: center; /* Centre horizontalement le contenu dans le conteneur */
+  justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0px; /* Réduit le padding pour resserrer les icônes */
+  padding: 0px;
   transition: all 0.3s ease;
-  color: #b3b3b3; /* Couleur des icônes en noir */
+  color: $gray;
   font-size: 22px;
-  background: transparent; /* Fond transparent */
+  background: transparent;
   width: 40px;
 }
 
 .icon a:hover {
-  color: #f68886; /* Couleur des icônes en gris clair au survol */
-  background-color: transparent; /* Maintenir le fond transparent au survol */
+  color: $accent;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 767px) {

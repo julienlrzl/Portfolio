@@ -12,7 +12,6 @@ const SocialMediaBar = () => {
 
       const footerRect = footer.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-      const barHeight = 220;
 
       if (footerRect.top < windowHeight) {
         const newBottom = windowHeight - footerRect.top + 15;

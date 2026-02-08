@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "./static/css/main.23c32b7f.css",
+    "main.js": "./static/js/main.1f35b415.js",
+    "static/media/Sokoban.png": "./static/media/Sokoban.9a0e3f2a592a88f175c1.png",
+    "static/media/Boutiquefr.png": "./static/media/Boutiquefr.367c3ea8214f350f3d9a.png",
+    "static/media/Auto.png": "./static/media/Auto.2b51c33116e4a1e41121.png",
+    "static/media/Puis4.png": "./static/media/Puis4.f12267059e82111aae56.png",
+    "static/media/Portfolio.png": "./static/media/Portfolio.c837fe19d5a32f978edc.png",
+    "static/media/FiraCode-Regular.ttf": "./static/media/FiraCode-Regular.dbd175e33b712ffcd71c.ttf",
+    "static/media/Ptut.png": "./static/media/Ptut.3d64ecb07a476ca076c0.png",
+    "static/media/Metaheuristic.png": "./static/media/Metaheuristic.699c06abcff35d831d8d.png",
+    "static/media/memoji.png": "./static/media/memoji.9fc873a44e6641e34e2d.png",
+    "static/media/europa-light-webfont.ttf": "./static/media/europa-light-webfont.d66543a9ebdebb6dfcea.ttf",
+    "static/media/EuropaRegular.ttf": "./static/media/EuropaRegular.6f7af97cfd0baa472939.ttf",
+    "index.html": "./index.html",
+    "main.23c32b7f.css.map": "./static/css/main.23c32b7f.css.map",
+    "main.1f35b415.js.map": "./static/js/main.1f35b415.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.23c32b7f.css",
+    "static/js/main.1f35b415.js"
+  ]
+}

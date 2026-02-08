@@ -1,20 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const Footer = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const { t, i18n } = useTranslation();
+  const isMobile = useMediaQuery("(max-width: 767px)");
+  const { t } = useTranslation();
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
   return (
     <footer className="footer text-footer">
       <div className="container straw">
@@ -33,7 +26,9 @@ const Footer = () => {
           </a>
         </div>
       ) : (
-        <div className="text-footer">Copyright 2024 ©️ Larzul Julien</div>
+        <div className="text-footer">
+          Copyright {new Date().getFullYear()} ©️ Larzul Julien
+        </div>
       )}
     </footer>
   );

@@ -25,7 +25,7 @@
   border-radius: 3px;
   width: 305px;
   height: 330px;
-  background-color: rgb(23, 42, 69);
+  background-color: $card-bg;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 20px;
@@ -82,12 +82,12 @@
   top: 50px;
   right: 30px;
   font-size: 22px;
-  color: #b3b3b3;
+  color: $gray;
   transition: all 0.3s ease;
 }
 
 .github-projects:hover {
-  color: rgb(0, 202, 249);
+  color: $cyan;
 }
 
 @media screen and (max-width: 767px) {
@@ -109,7 +109,7 @@
   text-align: left;
   line-height: 22.1px;
   position: absolute;
-  font-family: $font-3;
+  font-family: $font-light;
   width: 80%;
   top: 150px;
   left: 30px;
@@ -124,14 +124,14 @@
   bottom: 20px;
   left: 30px;
   color: rgb(251, 252, 255);
-  font-family: $font-2;
+  font-family: $font-code;
   font-size: 12px;
   height: 21px;
 }
 
 @media (max-width: 768px) {
   .rectangle-color {
-    margin-left: 5%; /* Ajustez selon le besoin */
-    margin-right: 5%; /* Ajustez selon le besoin */
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }

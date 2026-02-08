@@ -1,56 +1,28 @@
-import React, {
-  useState,
-  useEffect,
-  useRef,
-  createContext,
-  useContext,
-} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Memoji from "../assets/images/memoji.png";
 import { useTranslation } from "react-i18next";
-const ThemeContext = createContext();
-export const useTheme = () => useContext(ThemeContext);
+import { useTheme } from "../hooks/useTheme";
+import useMediaQuery from "../hooks/useMediaQuery";
+
+const technologies = [
+  "Python",
+  "PostgreSQL",
+  "Kibana",
+  "Docker",
+  "Forensics",
+  "IoT",
+  "Cryptographie",
+];
 
 const Home = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  // Mettre à jour pour utiliser useState
   const [typingText, setTypingText] = useState("Jakarta EE (Servlets)");
-  const technologies = [
-    "Python",
-    "PostgreSQL",
-    "Kibana",
-    "Docker",
-    "Forensics",
-    "IoT",
-    "Cryptographie",
-  ];
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const { isDarkTheme } = useTheme();
+  const isMobile = useMediaQuery("(max-width: 767px)");
 
-  // Utiliser useRef pour les variables qui doivent persister entre les rendus
   const currentTechnologyIndex = useRef(0);
   const currentCharIndex = useRef(0);
   const isDeleting = useRef(false);
-  const isMobile = windowWidth < 768;
-  const [isDarkTheme, setIsDarkTheme] = useState(() => {
-    // Initialiser le thème à partir du localStorage ou par défaut à false
-    const storedTheme = localStorage.getItem("theme");
-    return storedTheme ? storedTheme === "0" : true; // '0' pour le mode sombre
-  });
-
-  useEffect(() => {
-    // Mettre à jour le localStorage lorsque le thème change
-    localStorage.setItem("theme", isDarkTheme ? "0" : "1");
-  }, [isDarkTheme]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   useEffect(() => {
     let isCancelled = false;
@@ -94,13 +66,12 @@ const Home = () => {
     };
   }, []);
 
-  const imageStyle = windowWidth < 768 ? { display: "none" } : {};
   return (
     <div className="main-content">
       <div id="home" className="container h-100 d-flex main-text">
         <div className="row text-center">
-          <div class="col-md-2"></div>
-          <div class="col-md-8 d-flex align-items-center justify-content-center">
+          <div className="col-md-2"></div>
+          <div className="col-md-8 d-flex align-items-center justify-content-center">
             <p>
               <b>
                 {t("homeMainTextBeg")}{" "}
@@ -119,13 +90,14 @@ const Home = () => {
               </b>
             </p>
           </div>
-          <div class="col-md-2 d-flex align-items-end">
-            <img
-              src={Memoji}
-              style={imageStyle}
-              alt="Memoji"
-              className="memoji"
-            />
+          <div className="col-md-2 d-flex align-items-end">
+            {!isMobile && (
+              <img
+                src={Memoji}
+                alt="Memoji"
+                className="memoji"
+              />
+            )}
           </div>
         </div>
       </div>

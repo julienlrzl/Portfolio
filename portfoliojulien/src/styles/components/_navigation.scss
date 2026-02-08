@@ -2,7 +2,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 .navigation {
-  font-family: $font-1;
+  font-family: $font-primary;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,7 +14,7 @@
   z-index: 1000;
   transition: box-shadow 0.5s ease-in-out;
   background-color: $white;
-  color: #000;
+  color: $black;
 
   .navigation-logo {
     font-weight: 700;
@@ -37,11 +37,11 @@
       letter-spacing: 0.04em;
       line-height: 1em;
       text-decoration: none;
-      color: #b3b3b3;
+      color: $gray;
       margin-left: 22px;
 
       &:hover {
-        color: #8a8a8a; 
+        color: #8a8a8a;
       }
     }
   }
@@ -76,7 +76,7 @@
     padding: 2rem;
     visibility: hidden;
     background-color: #383e42;
-    color: white;
+    color: $white;
     transition: all 0.8s ease-out;
   }
 
@@ -148,7 +148,7 @@
 
 .scrolled {
   background-color: #222;
-  color: white;
+  color: $white;
   min-height: 25px;
 }
 

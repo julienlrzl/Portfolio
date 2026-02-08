@@ -10,32 +10,32 @@
 
 .icon-bar a {
   display: flex;
-  justify-content: center; /* Centre horizontalement le contenu dans le conteneur */
+  justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0px; /* Réduit le padding pour resserrer les icônes */
+  padding: 0px;
   transition: all 0.3s ease;
-  color: black; /* Couleur des icônes en noir */
+  color: $black;
   font-size: 22px;
-  background: transparent; /* Fond transparent */
+  background: transparent;
   height: 40px;
 }
 
 .icon-bar a:hover {
-  color: #f68886; /* Couleur des icônes en gris clair au survol */
-  background-color: transparent; /* Maintenir le fond transparent au survol */
+  color: $accent;
+  background-color: transparent;
 }
 
 /* Modification pour la ligne verticale centrée */
 .icon-bar::after {
   content: "";
-  height: 120px; /* Hauteur de la ligne */
-  width: 2px; /* Largeur de la ligne */
-  background-color: black; /* Couleur de la ligne */
+  height: 120px;
+  width: 2px;
+  background-color: $black;
   margin-top: 15px;
 }
 
 .content {
-  margin-left: 100px; /* Ajustez selon la présence de la barre d'icônes */
+  margin-left: 100px;
   font-size: 30px;
 }
