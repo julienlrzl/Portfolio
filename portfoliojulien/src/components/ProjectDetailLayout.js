@@ -24,11 +24,13 @@ const ProjectDetailLayout = ({ project }) => {
       <div className="main">
         <div className="col-md-3">
           <div>
-            <a onClick={handleBackClick} className="bouton-retour">
-              <button className="contact-button">
-                <span className="button_top">{t("buttonBack")}</span>
-              </button>
-            </a>
+            <button
+              type="button"
+              className="contact-button bouton-retour"
+              onClick={handleBackClick}
+            >
+              <span className="button_top">{t("buttonBack")}</span>
+            </button>
             <div className="d-flex flex-column">
               <span className="contact-pre-title title-presentation">
                 {project.year}
@@ -79,7 +81,7 @@ const ProjectDetailLayout = ({ project }) => {
         <div className="col-md-9">
           <div className="slider">
             <div className="slider-viewport">
-              <img src={project.image} alt="Image Siteweb" />
+              <img src={project.image} alt="Aperçu du projet" />
             </div>
           </div>
           <div className="text-pre">
