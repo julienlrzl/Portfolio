@@ -33,7 +33,7 @@ const Home = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(() => {
     // Initialiser le thème à partir du localStorage ou par défaut à false
     const storedTheme = localStorage.getItem("theme");
-    return storedTheme ? storedTheme === "0" : false; // '0' pour le mode sombre
+    return storedTheme ? storedTheme === "0" : true; // '0' pour le mode sombre
   });
 
   useEffect(() => {

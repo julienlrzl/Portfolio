@@ -7,7 +7,7 @@ const Navigation = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
