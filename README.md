@@ -4,7 +4,7 @@ Bienvenue sur mon portfolio personnel créé avec React.js. Ce projet est une vi
 
 Accès à mon Portfolio 💿 : https://larzuljulien.com
 
-![Screen du Portfolio](ScreenPortfolio.png)
+![Screen du Portfolio](Portfolio_1.png)
 
 
 ## Introduction
