@@ -77,34 +77,72 @@
   gap: 20px;
 }
 
-// Card
+// Card (base + light mode)
 .project-card {
   position: relative;
   display: flex;
   flex-direction: column;
   border-radius: 12px;
   padding: 28px 28px 22px;
-  background: $card-bg;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: $light-card-bg;
+  border: 1px solid $light-border;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease,
+    background 0.4s ease, border-color 0.4s ease;
   overflow: hidden;
 
   &:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
   }
-
 }
 
+.project-card__title {
+  color: $light-text;
+}
+
+.project-card__desc {
+  color: rgba(26, 26, 26, 0.6);
+}
+
+.project-card__footer {
+  border-top-color: $light-border;
+}
+
+.project-card__tech {
+  background: rgba(26, 26, 26, 0.06);
+  color: rgba(26, 26, 26, 0.6);
+}
+
+// Dark mode card
 .dark-mode .project-card {
+  background: $card-bg;
+  border-color: rgba(255, 255, 255, 0.06);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
 
   &:hover {
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45),
       0 0 20px rgba(255, 119, 0, 0.04);
   }
+}
+
+.dark-mode .project-card__title {
+  color: rgb(204, 214, 246);
+}
+
+.dark-mode .project-card__desc {
+  color: rgba(204, 214, 246, 0.65);
+}
+
+.dark-mode .project-card__footer {
+  border-top-color: rgba(255, 255, 255, 0.06);
+}
+
+.dark-mode .project-card__tech {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(204, 214, 246, 0.7);
 }
 
 // Card header
@@ -140,15 +178,17 @@
   font-family: $font-primary;
   font-size: 19px;
   font-weight: 600;
-  color: rgb(204, 214, 246);
+  color: $light-text;
   margin-bottom: 10px;
+  transition: color 0.4s ease;
 }
 
 .project-card__desc {
   font-family: $font-light;
   font-size: 14.5px;
   line-height: 1.55;
-  color: rgba(204, 214, 246, 0.65);
+  color: rgba(26, 26, 26, 0.6);
+  transition: color 0.4s ease;
 }
 
 // Card footer
@@ -158,7 +198,8 @@
   justify-content: space-between;
   margin-top: 18px;
   padding-top: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid $light-border;
+  transition: border-color 0.4s ease;
 }
 
 .project-card__techs {
@@ -173,8 +214,9 @@
   letter-spacing: 0.03em;
   padding: 3px 10px;
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(204, 214, 246, 0.7);
+  background: rgba(26, 26, 26, 0.06);
+  color: rgba(26, 26, 26, 0.6);
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 // Pagination
@@ -193,9 +235,9 @@
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(26, 26, 26, 0.12);
   background: transparent;
-  color: rgba(204, 214, 246, 0.5);
+  color: rgba(26, 26, 26, 0.4);
   font-size: 13px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -211,6 +253,11 @@
   }
 }
 
+.dark-mode .projects-pagination__btn {
+  border-color: rgba(255, 255, 255, 0.08);
+  color: rgba(204, 214, 246, 0.5);
+}
+
 .projects-pagination__page {
   display: flex;
   align-items: center;
@@ -218,13 +265,35 @@
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(26, 26, 26, 0.12);
   background: transparent;
-  color: rgba(204, 214, 246, 0.5);
+  color: rgba(26, 26, 26, 0.4);
   font-family: $font-code;
   font-size: 13px;
   cursor: pointer;
   transition: all 0.3s ease;
+
+  &:hover {
+    color: rgba(26, 26, 26, 0.7);
+    border-color: rgba(26, 26, 26, 0.2);
+  }
+
+  &--active {
+    background: $cyan;
+    color: $white;
+    border-color: $cyan;
+    font-weight: 600;
+
+    &:hover {
+      color: $white;
+      border-color: $cyan;
+    }
+  }
+}
+
+.dark-mode .projects-pagination__page {
+  border-color: rgba(255, 255, 255, 0.08);
+  color: rgba(204, 214, 246, 0.5);
 
   &:hover {
     color: rgba(204, 214, 246, 0.8);
@@ -232,14 +301,10 @@
   }
 
   &--active {
-    background: $cyan;
     color: $dark-bg;
-    border-color: $cyan;
-    font-weight: 600;
 
     &:hover {
       color: $dark-bg;
-      border-color: $cyan;
     }
   }
 }

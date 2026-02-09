@@ -1,0 +1,43 @@
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+}
+
+.cursor-inner {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $cyan;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+
+  &.hover {
+    transform: translate(-50%, -50%) scale(2);
+  }
+}
+
+.cursor-outer {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid $accent;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  &.hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.5;
+  }
+}
