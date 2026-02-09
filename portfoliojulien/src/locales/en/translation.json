@@ -37,14 +37,14 @@
   "contactTitle1": "Get in touch",
   "contactText": "If you are looking for an intern or have heard about an opportunity that matches what I am seeking, feel free to let me know. Whether you have a question or just want to say hi, my inbox is always open. I will get back to you as soon as possible!",
 
-  "formName": "Your name",
-  "formEmail": "Your email",
-  "formMessage": "Your message",
-  "formSubmit": "Send",
-  "formSending": "Sending...",
-  "formSent": "Message sent!",
-  "formError": "An error occurred. Please try again.",
-  "formNewMessage": "Send another message",
+  "formName": "$ whoami",
+  "formEmail": "$ mail --from",
+  "formMessage": "$ echo 'your message'",
+  "formSubmit": "$ send",
+  "formSending": "Sending packet...",
+  "formSent": "Connection established.",
+  "formError": "Connection refused. Try again.",
+  "formNewMessage": "New request",
 
   "footer0": "Made while eating ",
   "footer1": "in Lyon",
@@ -87,5 +87,33 @@
   "titlerightE0": "Network Anomaly Detection",
   "textrightE0": "As part of a university project at UQAC, I designed and deployed a complete network security monitoring architecture. The system relies on Suricata as an IDS/IPS for traffic analysis, syslog-ng for centralized log collection, Elasticsearch for indexing and storage, and Kibana for visualization. Together, they form a functional SIEM capable of detecting malicious behavior in real time through custom dashboards and automated Slack alerts.",
   "titlerightE1": "Simulated Attack Scenarios",
-  "textrightE1": "To validate the system's effectiveness, I implemented and tested 5 attack scenarios: detection of suspicious ICMP packets, Nmap port scanning, SSH brute-force login attempts, web application fuzzing, and anonymous FTP access attempts. Each scenario was configured with dedicated Suricata rules, and the generated alerts were visible in real time within Kibana. Automated Slack notifications enabled immediate response to detected threats."
+  "textrightE1": "To validate the system's effectiveness, I implemented and tested 5 attack scenarios: detection of suspicious ICMP packets, Nmap port scanning, SSH brute-force login attempts, web application fuzzing, and anonymous FTP access attempts. Each scenario was configured with dedicated Suricata rules, and the generated alerts were visible in real time within Kibana. Automated Slack notifications enabled immediate response to detected threats.",
+
+  "projecttitle8": "Vulhub – Vulnerability Patching",
+  "project8": "Exploitation and patching of Docker & Jetty vulnerabilities using Vulhub, without software upgrades.",
+  "titlerightV0": "Exploitation & Analysis",
+  "textrightV0": "University project at UQAC based on the Vulhub platform. The goal was to select two vulnerabilities from distinct environments (docker/unauthorized-rce and jetty/CVE-2021-28164), load each environment, present the vulnerability, and demonstrate the exploit. For each case, I had to explain precisely why the exploit works by analyzing the vulnerable configuration and underlying mechanisms.",
+  "titlerightV1": "Patching Without Upgrading",
+  "textrightV1": "The main constraint of the project was to propose a fix without upgrading the affected software. The solution had to rely on alternative approaches (configuration changes, filtering rules, access restrictions) then apply the fix and demonstrate that the exploit no longer worked after correction. This approach reflects real-world situations where an immediate upgrade is not feasible and a targeted patch is required.",
+
+  "projecttitle9": "Mobile Forensics",
+  "project9": "Forensic analysis of an Android 11 image: recovery and examination of digital evidence from a smartphone.",
+  "titlerightF0": "Mobile Digital Investigation",
+  "textrightF0": "Workshop carried out at UQAC focused on Mobile Forensics — the recovery and analysis of digital evidence from mobile devices. Starting from an Android 11 image, I followed a structured investigation methodology in five steps: identification, collection, examination, analysis, and presentation. The tools used include Autopsy as the main analysis platform, DB Browser for SQLite to explore application databases (TikTok, Facebook, Viber), and ALEAPP for Android artifact extraction.",
+  "titlerightF1": "Analysis Results",
+  "textrightF1": "The investigation allowed extracting and analyzing a wide range of data: call logs, SMS and MMS, messages from third-party applications, web browsing history, installed applications, geolocation data, multimedia files, and associated EXIF metadata. All results were organized and presented in a structured manner to reconstruct the activity of the analyzed smartphone user.",
+
+  "projecttitle11": "Network Profiling",
+  "project11": "Passive and active profiling of an Android smartphone using SentinelC, Wireshark, and Kali Linux to assess its attack surface.",
+  "titlerightPr0": "Passive Traffic Analysis",
+  "textrightPr0": "Workshop carried out at UQAC where I assumed the role of a network analyst to profile a Samsung Galaxy A32 5G (Android 13) connected to a SentinelC Wi-Fi access point. Passive analysis involved observing traffic automatically generated by the phone: DHCP exchanges, ARP checks, IPv6 configuration via ICMPv6/SLAAC, DNS queries to Google and Samsung services, NTP and cloud synchronization. Traffic was mostly encrypted with TLS 1.2/1.3 with strong QUIC (HTTP/3) presence. No sensitive data was observed in cleartext, and the absence of DNS over TLS/HTTPS and DNSSEC was noted.",
+  "titlerightPr1": "Active Analysis & Attack Surface",
+  "textrightPr1": "Active analysis involved direct interactions with the device: ICMP ping attempts (no response), port scans via SentinelC and Nmap (no open ports by default). For experimentation, an HTTP service was voluntarily opened on port 8080, then tested with Gobuster, Dirb, ffuf, and Nikto. A Path Traversal false positive was identified and analyzed. Network traces of the attacks were examined in the PCAP. Conclusion: modern Android smartphones expose very little attack surface — risks mainly come from third-party applications installed by the user.",
+
+  "projecttitle10": "OWASP Top 10 – Web Audit",
+  "project10": "Identification, exploitation, and patching of about twenty web vulnerabilities covering the OWASP Top 10 2024.",
+  "titlerightO0": "Analysis & Exploitation",
+  "textrightO0": "University project at UQAC focused on web application security. Using OWASP ZAP and intentionally vulnerable environments (DVWA, bWAPP, WebGoat, Juice Shop), I identified and analyzed about twenty vulnerabilities across all 10 categories of the OWASP Top 10 2024: Broken Access Control, Cryptographic Failures, Injection (SQL, NoSQL), Insecure Design, Security Misconfiguration, Vulnerable Components, Authentication Failures, Software & Data Integrity Failures, Logging & Monitoring Failures, and SSRF.",
+  "titlerightO1": "Patching & Verification",
+  "textrightO1": "Each detected vulnerability was manually reproduced, technically analyzed to understand its root cause, then fixed by modifying source code or server configuration. Fixes include adding security attributes to cookies, implementing prepared statements against injections, hardening HTTP headers, fixing CORS policies, and implementing CSRF protections. Each fix was re-tested with ZAP to confirm the mitigation."
 }

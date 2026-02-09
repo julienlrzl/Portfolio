@@ -19,7 +19,7 @@ i18n
   .use(initReactI18next) // Passez l'instance i18n à react-i18next.
   .init({
     resources,
-    lng: "fr", // Langue par défaut
+    lng: "en", // Langue par défaut
     keySeparator: false, // Utilisez des points dans les clés pour accéder aux objets
     interpolation: {
       escapeValue: false, // Pas besoin d'escaping pour React

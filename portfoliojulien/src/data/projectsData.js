@@ -9,6 +9,18 @@ import sokobanImg from "../assets/images/projects/sokoban/sokoban.png";
 import metaheuristicImg from "../assets/images/projects/metaheuristic/metaheuristic.png";
 import elkDashboard from "../assets/images/projects/siem-ids/kibana-dashboard.png";
 import elkScenario from "../assets/images/projects/siem-ids/kibana-scenario.png";
+import profilageArp from "../assets/images/projects/Profilage/arp_wireshark.png";
+import profilageCapture from "../assets/images/projects/Profilage/capture_paquets.png";
+import owaspA03 from "../assets/images/projects/Owasp/A03_admin_page.png";
+import owaspA04 from "../assets/images/projects/Owasp/A04_1.png";
+import vulnDocker1 from "../assets/images/projects/vulnhub/docker_1.png";
+import vulnDocker2 from "../assets/images/projects/vulnhub/docker_2.png";
+import vulnJetty1 from "../assets/images/projects/vulnhub/jetty_1.png";
+import vulnJetty2 from "../assets/images/projects/vulnhub/jetty_2.png";
+import forensicArchi from "../assets/images/projects/forensic/archi.png";
+import forensicAutopsy from "../assets/images/projects/forensic/autopsy.png";
+import forensicImages from "../assets/images/projects/forensic/images_autopsy.png";
+import forensicScreen from "../assets/images/projects/forensic/screen_autopsy.png";
 
 const projectsData = [
   {
@@ -32,6 +44,97 @@ const projectsData = [
     rightTextKey: "textrightE0",
     rightTitle1Key: "titlerightE1",
     rightText1Key: "textrightE1",
+  },
+  {
+    id: "Vulnhub",
+    route: "/Vulnhub",
+    titleKey: "projecttitle8",
+    descriptionKey: "project8",
+    emoji: "\uD83D\uDD13",
+    techs: "Docker Jetty Bash",
+    categories: ["Cyber"],
+    github: null,
+    image: vulnDocker1,
+    images: [vulnDocker1, vulnDocker2, vulnJetty1, vulnJetty2],
+    year: "2025",
+    languages: ["Bash"],
+    tools: ["Docker", "Vulhub", "Jetty", "cURL"],
+    team: [
+      { name: "Julien Larzul", github: "https://github.com/julienlrzl" },
+    ],
+    rightTitleKey: "titlerightV0",
+    rightTextKey: "textrightV0",
+    rightTitle1Key: "titlerightV1",
+    rightText1Key: "textrightV1",
+  },
+  {
+    id: "Forensic",
+    route: "/Forensic",
+    titleKey: "projecttitle9",
+    descriptionKey: "project9",
+    emoji: "\uD83D\uDD0D",
+    techs: "Autopsy SQLite ALEAPP",
+    categories: ["Cyber"],
+    github: null,
+    image: forensicAutopsy,
+    images: [forensicAutopsy, forensicArchi, forensicImages, forensicScreen],
+    carouselFit: "contain",
+    year: "2025",
+    languages: ["SQL"],
+    tools: ["Autopsy", "DB Browser for SQLite", "ALEAPP"],
+    team: [
+      { name: "Julien Larzul", github: "https://github.com/julienlrzl" },
+    ],
+    rightTitleKey: "titlerightF0",
+    rightTextKey: "textrightF0",
+    rightTitle1Key: "titlerightF1",
+    rightText1Key: "textrightF1",
+  },
+  {
+    id: "Profilage",
+    route: "/Profilage",
+    titleKey: "projecttitle11",
+    descriptionKey: "project11",
+    emoji: "\uD83D\uDCE1",
+    techs: "Wireshark Nmap Kali SentinelC",
+    categories: ["Cyber"],
+    github: null,
+    image: profilageCapture,
+    images: [profilageCapture, profilageArp],
+    carouselFit: "contain",
+    year: "2025",
+    languages: ["Bash"],
+    tools: ["SentinelC", "Wireshark", "Nmap", "Gobuster", "Nikto", "Kali Linux"],
+    team: [
+      { name: "Julien Larzul", github: "https://github.com/julienlrzl" },
+    ],
+    rightTitleKey: "titlerightPr0",
+    rightTextKey: "textrightPr0",
+    rightTitle1Key: "titlerightPr1",
+    rightText1Key: "textrightPr1",
+  },
+  {
+    id: "Owasp",
+    route: "/Owasp",
+    titleKey: "projecttitle10",
+    descriptionKey: "project10",
+    emoji: "\uD83D\uDC1B",
+    techs: "ZAP PHP Node.js SQL",
+    categories: ["Cyber"],
+    github: null,
+    image: owaspA03,
+    images: [owaspA03, owaspA04],
+    carouselFit: "contain",
+    year: "2025",
+    languages: ["PHP", "Node.js", "SQL"],
+    tools: ["OWASP ZAP", "DVWA", "bWAPP", "WebGoat", "Juice Shop"],
+    team: [
+      { name: "Julien Larzul", github: "https://github.com/julienlrzl" },
+    ],
+    rightTitleKey: "titlerightO0",
+    rightTextKey: "textrightO0",
+    rightTitle1Key: "titlerightO1",
+    rightText1Key: "textrightO1",
   },
   {
     id: "Metaheuristic",

@@ -2,10 +2,14 @@ import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import projectsData from "../data/projectsData";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const CATEGORIES = ["Tous", "Cyber", "Java", "Python", "IA", "Web"];
+const PROJECTS_PER_PAGE_DESKTOP = 9;
+const PROJECTS_PER_PAGE_MOBILE = 3;
 
 const ProjectCard = ({ project, t }) => (
   <Link
@@ -46,7 +50,10 @@ const ProjectCard = ({ project, t }) => (
 
 const Projects = () => {
   const { t } = useTranslation();
+  const isMobile = useMediaQuery("(max-width: 767px)");
   const [activeFilter, setActiveFilter] = useState("Tous");
+  const [currentPage, setCurrentPage] = useState(1);
+  const perPage = isMobile ? PROJECTS_PER_PAGE_MOBILE : PROJECTS_PER_PAGE_DESKTOP;
 
   const filteredProjects = useMemo(() => {
     if (activeFilter === "Tous") return projectsData;
@@ -54,6 +61,43 @@ const Projects = () => {
       p.categories.includes(activeFilter)
     );
   }, [activeFilter]);
+
+  const totalPages = Math.ceil(filteredProjects.length / perPage);
+  const paginatedProjects = filteredProjects.slice(
+    (currentPage - 1) * perPage,
+    currentPage * perPage
+  );
+
+  const scrollToProjects = () => {
+    const el = document.getElementById("projects");
+    if (!el) return;
+    const target = el.getBoundingClientRect().top + window.scrollY;
+    const start = window.scrollY;
+    const distance = target - start;
+    const duration = 800;
+    let startTime = null;
+
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const ease = progress < 0.5
+        ? 2 * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+      window.scrollTo({ top: start + distance * ease, behavior: "instant" });
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+
+  const handleFilterChange = (cat) => {
+    setActiveFilter(cat);
+    setCurrentPage(1);
+  };
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    scrollToProjects();
+  };
 
   return (
     <div className="main-content">
@@ -69,7 +113,7 @@ const Projects = () => {
                 key={cat}
                 type="button"
                 className={`filter-pill ${activeFilter === cat ? "filter-pill--active" : ""}`}
-                onClick={() => setActiveFilter(cat)}
+                onClick={() => handleFilterChange(cat)}
               >
                 {cat}
               </button>
@@ -77,7 +121,7 @@ const Projects = () => {
           </div>
         </div>
         <div className="projects-grid">
-          {filteredProjects.map((project) => (
+          {paginatedProjects.map((project) => (
             <ProjectCard
               key={project.id}
               project={project}
@@ -85,6 +129,36 @@ const Projects = () => {
             />
           ))}
         </div>
+        {totalPages > 1 && (
+          <div className="projects-pagination">
+            <button
+              type="button"
+              className="projects-pagination__btn"
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              <FontAwesomeIcon icon={faChevronLeft} />
+            </button>
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i + 1}
+                type="button"
+                className={`projects-pagination__page ${currentPage === i + 1 ? "projects-pagination__page--active" : ""}`}
+                onClick={() => handlePageChange(i + 1)}
+              >
+                {i + 1}
+              </button>
+            ))}
+            <button
+              type="button"
+              className="projects-pagination__btn"
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+            >
+              <FontAwesomeIcon icon={faChevronRight} />
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

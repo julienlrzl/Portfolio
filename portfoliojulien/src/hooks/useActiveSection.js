@@ -16,7 +16,7 @@ const useActiveSection = (sectionIds) => {
             setActiveSection(id);
           }
         },
-        { rootMargin: "-40% 0px -55% 0px" }
+        { rootMargin: "-35% 0px -45% 0px" }
       );
 
       observer.observe(el);

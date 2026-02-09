@@ -13,6 +13,10 @@ import Connect4 from "./pages/Connect4.js";
 import Sokoban from "./pages/Sokoban.js";
 import Metaheuristic from "./pages/Metaheuristic.js";
 import Elk from "./pages/Elk.js";
+import Vulnhub from "./pages/Vulnhub.js";
+import Forensic from "./pages/Forensic.js";
+import Owasp from "./pages/Owasp.js";
+import Profilage from "./pages/Profilage.js";
 
 const App = () => {
   return (
@@ -30,6 +34,10 @@ const App = () => {
           <Route path="/Sokoban" element={<Sokoban />} />
           <Route path="/Metaheuristic" element={<Metaheuristic />} />
           <Route path="/Elk" element={<Elk />} />
+          <Route path="/Vulnhub" element={<Vulnhub />} />
+          <Route path="/Forensic" element={<Forensic />} />
+          <Route path="/Owasp" element={<Owasp />} />
+          <Route path="/Profilage" element={<Profilage />} />
         </Routes>
       </ThemeProvider>
     </BrowserRouter>

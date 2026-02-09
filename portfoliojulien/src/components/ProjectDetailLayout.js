@@ -54,7 +54,7 @@ const ProjectDetailLayout = ({ project }) => {
           </div>
 
           {hasCarousel ? (
-            <div className="project-carousel">
+            <div className={`project-carousel ${project.carouselFit === "contain" ? "project-carousel--contain" : ""}`}>
               <div className="project-carousel__track">
                 <img
                   src={project.images[currentSlide]}
