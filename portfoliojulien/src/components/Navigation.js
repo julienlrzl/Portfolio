@@ -5,8 +5,8 @@ import { useTheme } from "../hooks/useTheme";
 import useMediaQuery from "../hooks/useMediaQuery";
 import useScrollShadow from "../hooks/useScrollShadow";
 import useActiveSection from "../hooks/useActiveSection";
-import sunIcon from "../assets/images/sun.png";
-import moonIcon from "../assets/images/crescent-moon.png";
+import sunIcon from "../assets/images/icons/sun.png";
+import moonIcon from "../assets/images/icons/crescent-moon.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const SECTIONS = ["home", "about", "projects", "contact"];

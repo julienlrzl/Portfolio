@@ -272,8 +272,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 .icon-sun,
@@ -281,8 +281,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   transition: opacity 0.5s ease;
   opacity: 1;
   object-fit: contain;
@@ -296,6 +296,8 @@
 .drapeau {
   width: 22px;
   height: auto;
+  position: relative;
+  top: -1px;
 }
 
 .nav-linkbis {

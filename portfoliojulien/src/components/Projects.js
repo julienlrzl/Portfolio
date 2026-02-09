@@ -5,7 +5,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
 import projectsData from "../data/projectsData";
 
-const CATEGORIES = ["Tous", "Web", "Java", "Python", "IA"];
+const CATEGORIES = ["Tous", "Cyber", "Java", "Python", "IA", "Web"];
 
 const ProjectCard = ({ project, t }) => (
   <Link

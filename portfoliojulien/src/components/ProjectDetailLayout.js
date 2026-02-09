@@ -1,15 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 
 const ProjectDetailLayout = ({ project }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const hasCarousel = project.images && project.images.length > 1;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -51,9 +53,44 @@ const ProjectDetailLayout = ({ project }) => {
             )}
           </div>
 
-          <div className="project-hero__image">
-            <img src={project.image} alt={t(project.titleKey)} />
-          </div>
+          {hasCarousel ? (
+            <div className="project-carousel">
+              <div className="project-carousel__track">
+                <img
+                  src={project.images[currentSlide]}
+                  alt={`${t(project.titleKey)} ${currentSlide + 1}`}
+                />
+              </div>
+              <button
+                type="button"
+                className="project-carousel__btn project-carousel__btn--prev"
+                onClick={() => setCurrentSlide((prev) => (prev === 0 ? project.images.length - 1 : prev - 1))}
+              >
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </button>
+              <button
+                type="button"
+                className="project-carousel__btn project-carousel__btn--next"
+                onClick={() => setCurrentSlide((prev) => (prev === project.images.length - 1 ? 0 : prev + 1))}
+              >
+                <FontAwesomeIcon icon={faChevronRight} />
+              </button>
+              <div className="project-carousel__dots">
+                {project.images.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    className={`project-carousel__dot ${i === currentSlide ? "project-carousel__dot--active" : ""}`}
+                    onClick={() => setCurrentSlide(i)}
+                  />
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="project-hero__image">
+              <img src={project.image} alt={t(project.titleKey)} />
+            </div>
+          )}
         </div>
 
         {/* Meta bar */}

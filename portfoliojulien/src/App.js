@@ -12,6 +12,7 @@ import Automata from "./pages/Automata.js";
 import Connect4 from "./pages/Connect4.js";
 import Sokoban from "./pages/Sokoban.js";
 import Metaheuristic from "./pages/Metaheuristic.js";
+import Elk from "./pages/Elk.js";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/Connect4" element={<Connect4 />} />
           <Route path="/Sokoban" element={<Sokoban />} />
           <Route path="/Metaheuristic" element={<Metaheuristic />} />
+          <Route path="/Elk" element={<Elk />} />
         </Routes>
       </ThemeProvider>
     </BrowserRouter>

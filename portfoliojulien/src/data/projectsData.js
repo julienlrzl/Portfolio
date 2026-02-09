@@ -1,12 +1,60 @@
-import portfolioImage from "../assets/images/Portfolio.png";
-import Boutiquefr from "../assets/images/Boutiquefr.png";
-import ptutImage from "../assets/images/Ptut.png";
-import Auto from "../assets/images/Auto.png";
-import Puis4 from "../assets/images/Puis4.png";
-import SokobanImg from "../assets/images/Sokoban.png";
-import Meta from "../assets/images/Metaheuristic.png";
+import portfolioImg1 from "../assets/images/projects/portfolio/Portfolio_1.png";
+import portfolioImg2 from "../assets/images/projects/portfolio/Portfolio_2.png";
+import portfolioImg3 from "../assets/images/projects/portfolio/Portfolio_3.png";
+import boutiqueFrImg from "../assets/images/projects/boutique-fr/boutique-fr.png";
+import ptutImg from "../assets/images/projects/ptut/ptut.png";
+import automataImg from "../assets/images/projects/automata/automata.png";
+import connect4Img from "../assets/images/projects/connect4/connect4.png";
+import sokobanImg from "../assets/images/projects/sokoban/sokoban.png";
+import metaheuristicImg from "../assets/images/projects/metaheuristic/metaheuristic.png";
+import elkDashboard from "../assets/images/projects/siem-ids/kibana-dashboard.png";
+import elkScenario from "../assets/images/projects/siem-ids/kibana-scenario.png";
 
 const projectsData = [
+  {
+    id: "Elk",
+    route: "/Elk",
+    titleKey: "projecttitle7",
+    descriptionKey: "project7",
+    emoji: "\uD83D\uDEE1\uFE0F",
+    techs: "Suricata ELK Bash Python",
+    categories: ["Cyber"],
+    github: null,
+    image: elkDashboard,
+    images: [elkDashboard, elkScenario],
+    year: "2025",
+    languages: ["Bash", "Python"],
+    tools: ["Suricata", "syslog-ng", "Elasticsearch", "Kibana", "Slack Webhooks"],
+    team: [
+      { name: "Julien Larzul", github: "https://github.com/julienlrzl" },
+    ],
+    rightTitleKey: "titlerightE0",
+    rightTextKey: "textrightE0",
+    rightTitle1Key: "titlerightE1",
+    rightText1Key: "textrightE1",
+  },
+  {
+    id: "Metaheuristic",
+    route: "/Metaheuristic",
+    titleKey: "projecttitle6",
+    descriptionKey: "project6",
+    emoji: "\uD83E\uDDE9",
+    techs: "Python",
+    categories: ["Python", "IA"],
+    github: "https://github.com/julienlrzl/Projet_Metaheuristiques",
+    image: metaheuristicImg,
+    year: "2025",
+    languages: ["Python"],
+    tools: ["Git"],
+    team: [
+      { name: "Julien Larzul", github: "https://github.com/julienlrzl" },
+      { name: "Victor Lefevre", github: "https://github.com/Victoooooooor" },
+    ],
+    rightTitleKey: "titlerightM0",
+    rightTextKey: "textrightM0",
+    rightTitle1Key: "titleright1",
+    rightText1Key: "textrightM1",
+  },
   {
     id: "Portfoliojulien",
     route: "/Portfoliojulien",
@@ -16,7 +64,8 @@ const projectsData = [
     techs: "React.js SCSS",
     categories: ["Web"],
     github: "https://github.com/julienlrzl/Portfolio",
-    image: portfolioImage,
+    image: portfolioImg1,
+    images: [portfolioImg1, portfolioImg2, portfolioImg3],
     year: "2024",
     languages: ["HTML", "SCSS", "Javascript"],
     tools: ["React.js", "Git"],
@@ -37,7 +86,7 @@ const projectsData = [
     techs: "PHP Twig JavaScript",
     categories: ["Web"],
     github: "https://github.com/julienlrzl/PHP_E_Boutique",
-    image: Boutiquefr,
+    image: boutiqueFrImg,
     year: "2024",
     languages: ["HTML", "CSS", "Javascript", "PHP"],
     tools: ["twig", "Git"],
@@ -52,6 +101,51 @@ const projectsData = [
     rightText1Key: "textrightB1",
   },
   {
+    id: "Automata",
+    route: "/Automata",
+    titleKey: "projecttitle3",
+    descriptionKey: "project3",
+    emoji: "\uD83E\uDDD1\uD83C\uDFFD\u200D\uD83D\uDCBB",
+    techs: "Java",
+    categories: ["Java"],
+    github: "https://github.com/julienlrzl/Projet-Java-Automates",
+    image: automataImg,
+    year: "2024",
+    languages: ["Java"],
+    tools: ["Git"],
+    team: [
+      { name: "Julien Larzul", github: "https://github.com/julienlrzl" },
+      { name: "Cédric Momprivé", github: "https://github.com/Majriche" },
+      { name: "Tom Toupence", github: "https://github.com/Freedqumm" },
+    ],
+    rightTitleKey: "titlerightA0",
+    rightTextKey: "textrightA0",
+    rightTitle1Key: "titleright1",
+    rightText1Key: "textrightA1",
+  },
+  {
+    id: "Sokoban",
+    route: "/Sokoban",
+    titleKey: "projecttitle5",
+    descriptionKey: "project5",
+    emoji: "\uD83D\uDC7E",
+    techs: "Java",
+    categories: ["Java"],
+    github: "https://github.com/julienlrzl/Sokoban",
+    image: sokobanImg,
+    year: "2024",
+    languages: ["Java"],
+    tools: null,
+    team: [
+      { name: "Julien Larzul", github: "https://github.com/julienlrzl" },
+      { name: "Loïc Plasse", github: "https://github.com/Loic-Plasse" },
+    ],
+    rightTitleKey: "titlerightS0",
+    rightTextKey: "textrightS0",
+    rightTitle1Key: "titleright1",
+    rightText1Key: "textrightS1",
+  },
+  {
     id: "Ptut",
     route: "/Ptut",
     titleKey: "projecttitle2",
@@ -60,7 +154,7 @@ const projectsData = [
     techs: "React.js .NET",
     categories: ["Web"],
     github: "https://github.com/julienlrzl/Projet_Tutore",
-    image: ptutImage,
+    image: ptutImg,
     year: "2023",
     languages: ["HTML", "CSS", "Javascript", ".Net", "SQL"],
     tools: ["React.js", "Git"],
@@ -77,29 +171,6 @@ const projectsData = [
     rightText1Key: "textrightP1",
   },
   {
-    id: "Automata",
-    route: "/Automata",
-    titleKey: "projecttitle3",
-    descriptionKey: "project3",
-    emoji: "\uD83E\uDDD1\uD83C\uDFFD\u200D\uD83D\uDCBB",
-    techs: "Java",
-    categories: ["Java"],
-    github: "https://github.com/julienlrzl/Projet-Java-Automates",
-    image: Auto,
-    year: "2024",
-    languages: ["Java"],
-    tools: ["Git"],
-    team: [
-      { name: "Julien Larzul", github: "https://github.com/julienlrzl" },
-      { name: "Cédric Momprivé", github: "https://github.com/Majriche" },
-      { name: "Tom Toupence", github: "https://github.com/Freedqumm" },
-    ],
-    rightTitleKey: "titlerightA0",
-    rightTextKey: "textrightA0",
-    rightTitle1Key: "titleright1",
-    rightText1Key: "textrightA1",
-  },
-  {
     id: "Connect4",
     route: "/Connect4",
     titleKey: "projecttitle4",
@@ -108,7 +179,7 @@ const projectsData = [
     techs: "Java",
     categories: ["Java"],
     github: null,
-    image: Puis4,
+    image: connect4Img,
     year: "2022",
     languages: ["Java"],
     tools: null,
@@ -119,50 +190,6 @@ const projectsData = [
     rightTextKey: "textrightC0",
     rightTitle1Key: "titleright1",
     rightText1Key: "textrightC1",
-  },
-  {
-    id: "Sokoban",
-    route: "/Sokoban",
-    titleKey: "projecttitle5",
-    descriptionKey: "project5",
-    emoji: "\uD83D\uDC7E",
-    techs: "Java",
-    categories: ["Java"],
-    github: "https://github.com/julienlrzl/Sokoban",
-    image: SokobanImg,
-    year: "2024",
-    languages: ["Java"],
-    tools: null,
-    team: [
-      { name: "Julien Larzul", github: "https://github.com/julienlrzl" },
-      { name: "Loïc Plasse", github: "https://github.com/Loic-Plasse" },
-    ],
-    rightTitleKey: "titlerightS0",
-    rightTextKey: "textrightS0",
-    rightTitle1Key: "titleright1",
-    rightText1Key: "textrightS1",
-  },
-  {
-    id: "Metaheuristic",
-    route: "/Metaheuristic",
-    titleKey: "projecttitle6",
-    descriptionKey: "project6",
-    emoji: "\uD83E\uDDE9",
-    techs: "Python",
-    categories: ["Python", "IA"],
-    github: "https://github.com/julienlrzl/Projet_Metaheuristiques",
-    image: Meta,
-    year: "2025",
-    languages: ["Python"],
-    tools: ["Git"],
-    team: [
-      { name: "Julien Larzul", github: "https://github.com/julienlrzl" },
-      { name: "Victor Lefevre", github: "https://github.com/Victoooooooor" },
-    ],
-    rightTitleKey: "titlerightM0",
-    rightTextKey: "textrightM0",
-    rightTitle1Key: "titleright1",
-    rightText1Key: "textrightM1",
   },
 ];
 
