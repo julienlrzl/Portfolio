@@ -18,32 +18,29 @@
 /* TYPING EFFECT */
 
 @keyframes blink-caret-light {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: $black;
-  }
+  0%, 100% { border-color: $light-text; }
+  50% { border-color: transparent; }
 }
 
-/* Animation pour le mode sombre */
 @keyframes blink-caret-dark {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: $white;
-  }
+  0%, 100% { border-color: $dark-text; }
+  50% { border-color: transparent; }
 }
 
 #typing-effect {
   font-family: $font-primary;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 0.1em solid $black;
-  animation: blink-caret 1s step-end infinite;
+  border-right: 2px solid $light-text;
+  padding-right: 2px;
+}
+
+.typing-effect-light {
+  animation: blink-caret-light 0.8s ease-in-out infinite;
+}
+
+.typing-effect-dark {
+  animation: blink-caret-dark 0.8s ease-in-out infinite;
 }
 
 /* END TYPING EFFECT */

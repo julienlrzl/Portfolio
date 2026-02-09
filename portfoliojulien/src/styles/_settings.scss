@@ -17,13 +17,28 @@ $font-primary: "font-primary", sans-serif;
 $font-code: "font-code", sans-serif;
 $font-light: "font-light", sans-serif;
 
+// Core colors
 $black: #000000;
-$gray: #b3b3b3;
 $white: #ffffff;
-$accent: #f68886;
-$dark-bg: #121212;
-$card-bg: rgb(23, 42, 69);
+$gray: #b3b3b3;
+$accent: #FF7700;
 $cyan: rgb(0, 202, 249);
+
+// Light mode palette
+$light-bg: #ece7e1;
+$light-text: #1a1a1a;
+$light-card-bg: #e2ddd7;
+$light-border: #d1ccc6;
+$light-nav-bg: #ece7e1;
+
+// Dark mode palette
+$dark-bg: #11111b;
+$dark-text: #f0f0f0;
+$dark-card-bg: #1c1c2e;
+$dark-border: rgba(255, 255, 255, 0.08);
+$dark-nav-bg: #11111b;
+
+$card-bg: rgb(23, 42, 69);
 
 @mixin verticalCenter {
   display: flex;
@@ -38,9 +53,11 @@ $cyan: rgb(0, 202, 249);
 }
 
 body {
-  background: $white;
+  background: $light-bg;
+  color: $light-text;
   font-family: $font-primary;
   position: relative;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 li {
   list-style-type: none;

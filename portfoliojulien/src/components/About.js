@@ -42,81 +42,24 @@ const About = () => {
           </div>
         </div>
         <div className="col-md-7 space-top">
-          <div className="card">
-            <div className="header">
-              <div className="top">
-                <div className="circle">
-                  <span className="red circle2"></span>
-                </div>
-                <div className="circle">
-                  <span className="yellow circle2"></span>
-                </div>
-                <div className="circle">
-                  <span className="green circle2"></span>
-                </div>
-                <div className="title">
-                  <p id="title2">Skills.java</p>
-                </div>
+          <div className="card terminal">
+            <div className="terminal-header">
+              <div className="terminal-dots">
+                <span className="terminal-dot dot-red">
+                  <svg className="dot-icon" viewBox="0 0 12 12"><path d="M3.5 3.5l5 5M8.5 3.5l-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/></svg>
+                </span>
+                <span className="terminal-dot dot-yellow">
+                  <svg className="dot-icon" viewBox="0 0 12 12"><path d="M2.5 6h7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/></svg>
+                </span>
+                <span className="terminal-dot dot-green">
+                  <svg className="dot-icon" viewBox="0 0 12 12"><path d="M3 9V3h6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/><path d="M9 3L3 9" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/></svg>
+                </span>
               </div>
+              <span className="terminal-title">julien@kali — bash</span>
             </div>
 
-            <div className="code-container">
-              <pre id="code" className="area">
-                <code>
-                  <span style={{ color: "#CB6C1C" }}>public class</span>{" "}
-                  <span style={{ color: "#1790C2" }}>Main</span> {"{"}
-                  <br />
-                  &nbsp;
-                  <span style={{ color: "#CB6C1C" }}>
-                    public static void
-                  </span>{" "}
-                  <span style={{ color: "#2C903D" }}>main</span>(
-                  <span style={{ color: "#1790C2" }}>String[]</span>{" "}
-                  <span style={{ color: "#6A93D7" }}>args</span>) {"{"}
-                  <br />
-                  &nbsp;&nbsp;&nbsp;
-                  <span style={{ color: "#6A93D7" }}>System</span>.
-                  <span style={{ color: "#8DDAF8" }}>out</span>.
-                  <span style={{ color: "#A7EC22" }}>println</span>("Hello World
-                  !");
-                  <br />
-                  <br />
-                  &nbsp;&nbsp;&nbsp;{" "}
-                  <span style={{ color: "#1790C2" }}>String[]</span>{" "}
-                  <span style={{ color: "#F1F202" }}>langages</span> = {"{"}
-                  <br />
-                  &nbsp;&nbsp;&nbsp;"Python",
-                  <br />
-                  &nbsp;&nbsp;&nbsp;"Java",
-                  <br />
-                  &nbsp;&nbsp;&nbsp;"HTML",
-                  <br />
-                  &nbsp;&nbsp;&nbsp;"CSS",
-                  <br />
-                  &nbsp;&nbsp;&nbsp;"JavaScript",
-                  <br />
-                  &nbsp;&nbsp;&nbsp;"SQL",
-                  <br />
-                  &nbsp;&nbsp;&nbsp;"PHP",
-                  <br />
-                  &nbsp;&nbsp;&nbsp;".NET"
-                  <br />
-                  &nbsp;&nbsp;&nbsp;{"}"}
-                  <br />
-                  <br />
-                  &nbsp;&nbsp;&nbsp;
-                  <span style={{ color: "#1790C2" }}>String[]</span>{" "}
-                  <span style={{ color: "#F1F202" }}>technologies</span> = {"{"}
-                  <br />
-                  &nbsp;&nbsp;&nbsp;"Git",
-                  <br />
-                  &nbsp;&nbsp;&nbsp;"AWS",
-                  <br />
-                  &nbsp;&nbsp;&nbsp;"React.js"
-                  <br />
-                  &nbsp;&nbsp;&nbsp;{"}"}
-                </code>
-              </pre>
+            <div className="terminal-body">
+<pre className="terminal-pre"><code><span className="t-prompt">julien@kali</span><span className="t-sep">:</span><span className="t-path">~</span><span className="t-dollar"> $ </span><span className="t-cmd">whoami</span>{"\n"}{"julien — cybersecurity student"}{"\n"}{"\n"}<span className="t-prompt">julien@kali</span><span className="t-sep">:</span><span className="t-path">~</span><span className="t-dollar"> $ </span><span className="t-cmd">./scan_skills.sh</span>{"\n"}<span className="t-output-header">{"[*] Scanning skills..."}</span>{"\n"}<span className="t-output-header">{"[+] Scan complete — 3 categories found"}</span>{"\n"}{"\n"}<span className="t-section">{"  CYBERSECURITY"}</span>{"\n"}<span className="t-bar">{"  ├── "}</span>{"OWASP ZAP"}{"\n"}<span className="t-bar">{"  ├── "}</span>{"Burp Suite"}{"\n"}<span className="t-bar">{"  ├── "}</span>{"Suricata "}<span className="t-dim">{"(IDS/IPS)"}</span>{"\n"}<span className="t-bar">{"  ├── "}</span>{"ELK Stack"}{"\n"}<span className="t-bar">{"  ├── "}</span>{"syslog-ng"}{"\n"}<span className="t-bar">{"  └── "}</span>{"Autopsy"}{"\n"}{"\n"}<span className="t-section">{"  TECHNOLOGIES"}</span>{"\n"}<span className="t-bar">{"  ├── "}</span>{"Python"}{"\n"}<span className="t-bar">{"  ├── "}</span>{"Java"}{"\n"}<span className="t-bar">{"  ├── "}</span>{"SQL"}{"\n"}<span className="t-bar">{"  ├── "}</span>{"AWS"}{"\n"}<span className="t-bar">{"  ├── "}</span>{"Git"}{"\n"}<span className="t-bar">{"  ├── "}</span>{"Docker"}{"\n"}<span className="t-bar">{"  ├── "}</span>{"YAML"}{"\n"}<span className="t-bar">{"  └── "}</span>{"ARM "}<span className="t-dim">{"(notions)"}</span>{"\n"}{"\n"}<span className="t-section">{"  NETWORKS & SYSTEMS"}</span>{"\n"}<span className="t-bar">{"  ├── "}</span>{"TCP/IP · Routage · DNS · HTTP"}{"\n"}<span className="t-bar">{"  └── "}</span>{"Linux · Windows · macOS"}{"\n"}{"\n"}<span className="t-prompt">julien@kali</span><span className="t-sep">:</span><span className="t-path">~</span><span className="t-dollar"> $ </span><span className="t-cursor"></span></code></pre>
             </div>
           </div>
         </div>

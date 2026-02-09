@@ -15,7 +15,7 @@ const technologies = [
 ];
 
 const Home = () => {
-  const [typingText, setTypingText] = useState("Jakarta EE (Servlets)");
+  const [typingText, setTypingText] = useState("");
   const { t } = useTranslation();
   const { isDarkTheme } = useTheme();
   const isMobile = useMediaQuery("(max-width: 767px)");
@@ -25,53 +25,53 @@ const Home = () => {
   const isDeleting = useRef(false);
 
   useEffect(() => {
-    let isCancelled = false;
+    let timeoutId;
+
+    const randomDelay = (base, variance) =>
+      base + Math.random() * variance - variance / 2;
 
     const type = () => {
-      if (isCancelled) return;
-
       const currentIdx = currentTechnologyIndex.current;
       const currentTechnology = technologies[currentIdx];
-      let part = currentTechnology.slice(0, currentCharIndex.current);
 
-      setTypingText(part);
-
-      if (isDeleting.current) {
-        currentCharIndex.current -= 1;
-      } else {
+      if (!isDeleting.current) {
         currentCharIndex.current += 1;
-      }
+        setTypingText(currentTechnology.slice(0, currentCharIndex.current));
 
-      if (
-        !isDeleting.current &&
-        currentCharIndex.current === currentTechnology.length
-      ) {
-        setTimeout(() => {
-          isDeleting.current = true;
-          type();
-        }, 300);
-      } else if (isDeleting.current && currentCharIndex.current === 0) {
-        isDeleting.current = false;
-        currentTechnologyIndex.current = (currentIdx + 1) % technologies.length;
-        setTimeout(type, 300);
+        if (currentCharIndex.current === currentTechnology.length) {
+          timeoutId = setTimeout(() => {
+            isDeleting.current = true;
+            type();
+          }, 2000);
+        } else {
+          timeoutId = setTimeout(type, randomDelay(110, 50));
+        }
       } else {
-        setTimeout(type, isDeleting.current ? 70 : 120);
+        currentCharIndex.current -= 1;
+        setTypingText(currentTechnology.slice(0, currentCharIndex.current));
+
+        if (currentCharIndex.current === 0) {
+          isDeleting.current = false;
+          currentTechnologyIndex.current =
+            (currentIdx + 1) % technologies.length;
+          timeoutId = setTimeout(type, 500);
+        } else {
+          timeoutId = setTimeout(type, randomDelay(60, 25));
+        }
       }
     };
 
-    type();
+    timeoutId = setTimeout(type, 500);
 
-    return () => {
-      isCancelled = true;
-    };
+    return () => clearTimeout(timeoutId);
   }, []);
 
   return (
     <div className="main-content">
       <div id="home" className="container h-100 d-flex main-text">
         <div className="row text-center">
-          <div className="col-md-2"></div>
-          <div className="col-md-8 d-flex align-items-center justify-content-center">
+          <div className="col-md-1"></div>
+          <div className="col-md-10 d-flex align-items-center justify-content-center">
             <p>
               <b>
                 {t("homeMainTextBeg")}{" "}
@@ -90,7 +90,7 @@ const Home = () => {
               </b>
             </p>
           </div>
-          <div className="col-md-2 d-flex align-items-end">
+          <div className="col-md-1 d-flex align-items-end">
             {!isMobile && (
               <img
                 src={Memoji}

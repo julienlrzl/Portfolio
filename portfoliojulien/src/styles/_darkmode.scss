@@ -1,47 +1,33 @@
+// Dark mode — deep navy background, warm accents
 .dark-mode {
   background-color: $dark-bg;
-  color: $white;
+  color: $dark-text;
 }
 
 .dark-mode .icon-bar::after {
-  background-color: $white;
+  background-color: $dark-text;
 }
 
 .dark-mode .icon-bar a {
-  color: $white;
+  color: $dark-text;
 }
 
-.dark-mode .shadow {
-  box-shadow: 0 2px 4px rgba(65, 64, 64, 0.1) !important;
-}
-
-.dark-mode .navigation {
-  background-color: $dark-bg;
-}
-
-.dark-mode .navigation-logo {
-  color: $white;
-}
-
-.dark-mode .footer {
-  background-color: $dark-bg;
-  box-shadow: 0 -2px 4px rgba(65, 64, 64, 0.1);
-}
-
+// Typing effect
 .dark-mode #typing-effect {
-  border-right: 0.1em solid $white;
+  border-right-color: $dark-text;
 }
 
+// Project detail pages
 .dark-mode .puce {
-  color: $white;
+  color: $dark-text;
 }
 
 .dark-mode .github-bis {
-  color: $white;
+  color: $dark-text;
 }
 
 .dark-mode .text-pre {
-  color: $white;
+  color: $dark-text;
 }
 
 .dark-mode .title-text-pre {
