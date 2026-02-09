@@ -53,6 +53,11 @@
       &:hover {
         color: $light-text;
       }
+
+      &--active {
+        color: $light-text;
+        font-weight: 600;
+      }
     }
 
     .nav-link-divider {
@@ -82,6 +87,11 @@
 
     &:hover {
       color: $dark-text;
+    }
+
+    &--active {
+      color: $dark-text;
+      font-weight: 600;
     }
   }
 
@@ -138,9 +148,7 @@
     padding: 2rem;
     visibility: hidden;
     opacity: 0;
-    background: rgba(236, 231, 225, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: $light-bg;
     color: $light-text;
     transition: opacity 0.4s ease, visibility 0.4s ease;
     z-index: 999;
@@ -149,7 +157,7 @@
   }
 
   .dark-mode .navigation-links {
-    background: rgba(17, 17, 27, 0.95);
+    background: $dark-bg;
     color: $dark-text;
   }
 

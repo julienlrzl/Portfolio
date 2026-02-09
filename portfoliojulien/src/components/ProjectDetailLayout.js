@@ -4,6 +4,7 @@ import Navigation from "./Navigation";
 import Footer from "./Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 
 const ProjectDetailLayout = ({ project }) => {
@@ -11,7 +12,7 @@ const ProjectDetailLayout = ({ project }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
 
   const handleBackClick = () => {
@@ -21,79 +22,92 @@ const ProjectDetailLayout = ({ project }) => {
   return (
     <div className="app-content">
       <Navigation variant="project" />
-      <div className="main">
-        <div className="col-md-3">
-          <div>
-            <button
-              type="button"
-              className="contact-button bouton-retour"
-              onClick={handleBackClick}
-            >
-              <span className="button_top">{t("buttonBack")}</span>
-            </button>
-            <div className="d-flex flex-column">
-              <span className="contact-pre-title title-presentation">
-                {project.year}
-              </span>
-              <h1 className="contact-title">{t(project.titleKey)}</h1>
-              <h2 className="contact-title-bis title-presentation-bis">
-                {t("titleleft0")}
-              </h2>
-              <ul>
-                {project.languages.map((lang) => (
-                  <li key={lang} className="puce">
-                    {lang}
-                  </li>
+
+      <div className="project-detail">
+        {/* Hero */}
+        <div className="project-hero">
+          <button
+            type="button"
+            className="project-back"
+            onClick={handleBackClick}
+          >
+            <FontAwesomeIcon icon={faArrowLeft} />
+            <span>{t("buttonBack")}</span>
+          </button>
+
+          <div className="project-hero__info">
+            <span className="project-hero__year">{project.year}</span>
+            <h1 className="project-hero__title">{t(project.titleKey)}</h1>
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-hero__github"
+              >
+                <FontAwesomeIcon icon={faGithub} />
+                <span>GitHub</span>
+              </a>
+            )}
+          </div>
+
+          <div className="project-hero__image">
+            <img src={project.image} alt={t(project.titleKey)} />
+          </div>
+        </div>
+
+        {/* Meta bar */}
+        <div className="project-meta">
+          <div className="project-meta__group">
+            <span className="project-meta__label">{t("titleleft0")}</span>
+            <div className="project-meta__tags">
+              {project.languages.map((lang) => (
+                <span key={lang} className="project-meta__tag">{lang}</span>
+              ))}
+            </div>
+          </div>
+
+          {project.tools && (
+            <div className="project-meta__group">
+              <span className="project-meta__label">{t("titleleft1")}</span>
+              <div className="project-meta__tags">
+                {project.tools.map((tool) => (
+                  <span key={tool} className="project-meta__tag">{tool}</span>
                 ))}
-              </ul>
-              {project.tools && (
-                <>
-                  <h2 className="contact-title-bis title-presentation-bis">
-                    {t("titleleft1")}
-                  </h2>
-                  <ul>
-                    {project.tools.map((tool) => (
-                      <li key={tool} className="puce">
-                        {tool}
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
-              <h2 className="contact-title-bis title-presentation-bis">
-                {t("titleleft2")}
-              </h2>
-              <ul>
-                {project.team.map((member) => (
-                  <li key={member.name} className="puce">
-                    {member.name}
-                    {member.github && (
-                      <a href={member.github} className="github-bis">
-                        <FontAwesomeIcon icon={faGithub} />
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ul>
+              </div>
+            </div>
+          )}
+
+          <div className="project-meta__group">
+            <span className="project-meta__label">{t("titleleft2")}</span>
+            <div className="project-meta__tags">
+              {project.team.map((member) => (
+                <span key={member.name} className="project-meta__tag project-meta__tag--member">
+                  {member.name}
+                  {member.github && (
+                    <a href={member.github} target="_blank" rel="noopener noreferrer" className="project-meta__member-gh">
+                      <FontAwesomeIcon icon={faGithub} />
+                    </a>
+                  )}
+                </span>
+              ))}
             </div>
           </div>
         </div>
-        <div className="col-md-9">
-          <div className="slider">
-            <div className="slider-viewport">
-              <img src={project.image} alt="Aperçu du projet" />
-            </div>
-          </div>
-          <div className="text-pre">
-            <h3 className="title-text-pre">{t(project.rightTitleKey)}</h3>
+
+        {/* Content */}
+        <div className="project-content">
+          <div className="project-content__section">
+            <h3 className="project-content__title">{t(project.rightTitleKey)}</h3>
             <p>{t(project.rightTextKey)}</p>
-            <h3 className="title-text-pre title-text-pre-space">
-              {t(project.rightTitle1Key)}
-            </h3>
-            <p className="space-bottom">{t(project.rightText1Key)}</p>
+          </div>
+          <div className="project-content__section">
+            <h3 className="project-content__title">{t(project.rightTitle1Key)}</h3>
+            <p>{t(project.rightText1Key)}</p>
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );
