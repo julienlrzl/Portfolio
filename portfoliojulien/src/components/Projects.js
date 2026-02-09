@@ -7,10 +7,10 @@ import projectsData from "../data/projectsData";
 
 const CATEGORIES = ["Tous", "Web", "Java", "Python", "IA"];
 
-const ProjectCard = ({ project, t, visible }) => (
+const ProjectCard = ({ project, t }) => (
   <Link
     to={project.route}
-    className={`project-card ${visible ? "project-card--visible" : "project-card--hidden"}`}
+    className="project-card"
   >
     <div className="project-card__header">
       <svg className="project-card__folder" viewBox="0 0 60 60" fill="currentColor">
@@ -77,12 +77,11 @@ const Projects = () => {
           </div>
         </div>
         <div className="projects-grid">
-          {projectsData.map((project) => (
+          {filteredProjects.map((project) => (
             <ProjectCard
               key={project.id}
               project={project}
               t={t}
-              visible={filteredProjects.includes(project)}
             />
           ))}
         </div>

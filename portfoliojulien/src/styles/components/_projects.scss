@@ -88,8 +88,7 @@
   border: 1px solid rgba(255, 255, 255, 0.06);
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.35s ease, box-shadow 0.35s ease,
-    opacity 0.4s ease, max-height 0.4s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
   overflow: hidden;
 
   &:hover {
@@ -97,22 +96,6 @@
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
   }
 
-  &--visible {
-    opacity: 1;
-    max-height: 400px;
-    pointer-events: auto;
-  }
-
-  &--hidden {
-    opacity: 0;
-    max-height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    border-width: 0;
-    margin-top: -10px;
-    pointer-events: none;
-    overflow: hidden;
-  }
 }
 
 .dark-mode .project-card {
