@@ -21,6 +21,11 @@
   margin-top: 25px;
 }
 
+.div-text-about p {
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+
 .about-buttons {
   display: flex;
   gap: 15px;
@@ -30,7 +35,7 @@
 /* TERMINAL CARD */
 
 .card {
-  width: 70%;
+  width: 85%;
   margin: 0 auto;
   background-color: rgb(15, 23, 42);
   border-radius: 8px;
@@ -116,9 +121,8 @@
 }
 
 .terminal-body {
-  padding: 16px 20px;
+  padding: 20px 24px;
   overflow-y: auto;
-  max-height: 380px;
 }
 
 .terminal-pre {
@@ -191,6 +195,8 @@
 .div-about {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  gap: 60px;
 }
 
 .div-text-about {
@@ -200,6 +206,10 @@
 @media screen and (max-width: 767px) {
   .div-about {
     flex-direction: column;
+  }
+
+  .div-text-about p {
+    font-size: 15px;
   }
 
   .terminal-pre {

@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { useTheme } from "../hooks/useTheme";
 import useMediaQuery from "../hooks/useMediaQuery";
 import useScrollShadow from "../hooks/useScrollShadow";
+import sunIcon from "../assets/images/sun.png";
+import moonIcon from "../assets/images/crescent-moon.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Navigation = ({ variant = "home" }) => {
@@ -86,23 +88,16 @@ const Navigation = ({ variant = "home" }) => {
         onClick={toggleTheme}
       >
         <div className="theme-icon">
-          <svg
+          <img
+            src={sunIcon}
+            alt="Light mode"
             className={`icon-sun ${isDarkTheme ? "icon-hidden" : ""}`}
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="12" cy="12" r="4" fill="currentColor"/>
-            <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-          </svg>
-          <svg
+          />
+          <img
+            src={moonIcon}
+            alt="Dark mode"
             className={`icon-moon ${!isDarkTheme ? "icon-hidden" : ""}`}
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M21.752 15.002A9.718 9.718 0 0112.478 22C6.948 22 2.478 17.53 2.478 12c0-4.478 2.943-8.268 7.002-9.522a.75.75 0 01.918.918 8.218 8.218 0 0010.376 10.376.75.75 0 01.978.228z"/>
-          </svg>
+          />
         </div>
       </button>
       <button

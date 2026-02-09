@@ -183,11 +183,6 @@
     border-top: 1px solid rgba(128, 128, 128, 0.15);
   }
 
-  .nav-controls .theme-toggle-btn {
-    color: $accent !important;
-    font-size: 1.3em;
-  }
-
   .nav-controls .theme-toggle-btn .theme-icon,
   .nav-controls .theme-toggle-btn .icon-sun,
   .nav-controls .theme-toggle-btn .icon-moon {
@@ -262,7 +257,6 @@
   padding: 0;
   cursor: pointer;
   font: inherit;
-  color: $accent !important;
 }
 
 .theme-icon {
@@ -283,6 +277,7 @@
   height: 20px;
   transition: opacity 0.5s ease;
   opacity: 1;
+  object-fit: contain;
 }
 
 .icon-hidden {

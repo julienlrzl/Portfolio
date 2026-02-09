@@ -5,133 +5,239 @@
   padding-right: 100px;
 }
 
-.responsive {
+// Header: title + filters
+.projects-header {
   display: flex;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 24px;
+}
+
+// Filter pills
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-pill {
+  font-family: $font-code;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 7px 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(26, 26, 26, 0.12);
+  background: transparent;
+  color: rgba(26, 26, 26, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $light-text;
+    border-color: rgba(26, 26, 26, 0.25);
+  }
+
+  &--active {
+    background: $light-text;
+    color: $light-bg;
+    border-color: $light-text;
+
+    &:hover {
+      color: $light-bg;
+    }
+  }
+}
+
+.dark-mode .filter-pill {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(240, 240, 240, 0.4);
+
+  &:hover {
+    color: $dark-text;
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  &--active {
+    background: $dark-text;
+    color: $dark-bg;
+    border-color: $dark-text;
+
+    &:hover {
+      color: $dark-bg;
+    }
+  }
+}
+
+// Grid
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+// Card
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  padding: 28px 28px 22px;
+  background: $card-bg;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease,
+    opacity 0.4s ease, max-height 0.4s ease;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  }
+
+  &--visible {
+    opacity: 1;
+    max-height: 400px;
+    pointer-events: auto;
+  }
+
+  &--hidden {
+    opacity: 0;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-width: 0;
+    margin-top: -10px;
+    pointer-events: none;
+    overflow: hidden;
+  }
+}
+
+.dark-mode .project-card {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45),
+      0 0 20px rgba(255, 119, 0, 0.04);
+  }
+}
+
+// Card header
+.project-card__header {
+  display: flex;
   align-items: center;
-  flex-direction: row;
-}
-
-.left {
-  margin-left: 280px;
-}
-
-.down {
-  margin-bottom: 50px;
-}
-
-.rectangle-color {
-  position: relative;
-  border-radius: 3px;
-  width: 305px;
-  height: 330px;
-  background-color: $card-bg;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 20px;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.3);
-}
-
-.rectangle-color-not {
-  position: relative;
-  width: 305px;
-  height: 330px;
-  background-color: transparent;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 5px;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.rectangle-color:hover {
-  box-shadow: -8px 0px 16px rgba(0, 0, 0, 0.5);
-  transform: translateY(-5px);
+.project-card__folder {
+  width: 40px;
+  height: 40px;
+  color: $cyan;
+}
+
+.project-card__github {
+  font-size: 20px;
+  color: $gray;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $cyan;
+  }
+}
+
+// Card body
+.project-card__body {
+  flex: 1;
+}
+
+.project-card__title {
+  font-family: $font-primary;
+  font-size: 19px;
+  font-weight: 600;
+  color: rgb(204, 214, 246);
+  margin-bottom: 10px;
+}
+
+.project-card__desc {
+  font-family: $font-light;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: rgba(204, 214, 246, 0.65);
+}
+
+// Card footer
+.project-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.project-card__techs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.project-card__tech {
+  font-family: $font-code;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(204, 214, 246, 0.7);
+}
+
+// ——— Responsive ———
+@media screen and (max-width: 1100px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 767px) {
   #projects {
     padding-top: 100px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
-  .left {
-    margin-left: 10px;
-  }
-
-  .rectangle-color-not {
-    display: none;
-  }
-}
-
-.svg-container {
-  position: absolute;
-  top: 40px;
-  left: 30px;
-}
-
-.svg-container svg {
-  display: block;
-  height: 50px;
-  width: auto;
-}
-
-.github-projects {
-  position: absolute;
-  top: 50px;
-  right: 30px;
-  font-size: 22px;
-  color: $gray;
-  transition: all 0.3s ease;
-}
-
-.github-projects:hover {
-  color: $cyan;
-}
-
-@media screen and (max-width: 767px) {
-  .responsive {
+  .projects-header {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
   }
-}
 
-.title-project {
-  position: absolute;
-  top: 110px;
-  left: 30px;
-  font-size: 22px;
-  font-weight: 600;
-  color: rgb(204, 214, 246);
-}
+  .filter-bar {
+    gap: 6px;
+  }
 
-.text-project {
-  text-align: left;
-  line-height: 22.1px;
-  position: absolute;
-  font-family: $font-light;
-  width: 80%;
-  top: 150px;
-  left: 30px;
-  font-size: 17px;
-  font-weight: 100;
-  color: rgb(204, 214, 246);
-}
+  .filter-pill {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
 
-.footer-project {
-  position: absolute;
-  text-align: left;
-  bottom: 20px;
-  left: 30px;
-  color: rgb(251, 252, 255);
-  font-family: $font-code;
-  font-size: 12px;
-  height: 21px;
-}
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
 
-@media (max-width: 768px) {
-  .rectangle-color {
-    margin-left: 5%;
-    margin-right: 5%;
+  .project-card {
+    padding: 22px 22px 18px;
+  }
+
+  .project-card__title {
+    font-size: 17px;
+  }
+
+  .project-card__desc {
+    font-size: 13.5px;
   }
 }

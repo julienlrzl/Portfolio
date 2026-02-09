@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.7e11601a.css",
-    "main.js": "./static/js/main.a6db0afa.js",
+    "main.css": "./static/css/main.8262ba5c.css",
+    "main.js": "./static/js/main.32060ecd.js",
     "static/media/Sokoban.png": "./static/media/Sokoban.9a0e3f2a592a88f175c1.png",
     "static/media/Boutiquefr.png": "./static/media/Boutiquefr.367c3ea8214f350f3d9a.png",
     "static/media/Auto.png": "./static/media/Auto.2b51c33116e4a1e41121.png",
@@ -14,11 +14,11 @@
     "static/media/europa-light-webfont.ttf": "./static/media/europa-light-webfont.d66543a9ebdebb6dfcea.ttf",
     "static/media/EuropaRegular.ttf": "./static/media/EuropaRegular.6f7af97cfd0baa472939.ttf",
     "index.html": "./index.html",
-    "main.7e11601a.css.map": "./static/css/main.7e11601a.css.map",
-    "main.a6db0afa.js.map": "./static/js/main.a6db0afa.js.map"
+    "main.8262ba5c.css.map": "./static/css/main.8262ba5c.css.map",
+    "main.32060ecd.js.map": "./static/js/main.32060ecd.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e11601a.css",
-    "static/js/main.a6db0afa.js"
+    "static/css/main.8262ba5c.css",
+    "static/js/main.32060ecd.js"
   ]
 }
