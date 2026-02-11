@@ -34,7 +34,7 @@ const ProjectCard = ({ project, t }) => (
     </div>
     <div className="project-card__body">
       <h3 className="project-card__title">
-        {t(project.titleKey)} {project.emoji}
+        <span className="project-card__prefix">&gt;_</span> {t(project.titleKey)}
       </h3>
       <p className="project-card__desc">{t(project.descriptionKey)}</p>
     </div>
