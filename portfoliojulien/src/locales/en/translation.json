@@ -115,5 +115,8 @@
   "titlerightO0": "Analysis & Exploitation",
   "textrightO0": "University project at UQAC focused on web application security. Using OWASP ZAP and intentionally vulnerable environments (DVWA, bWAPP, WebGoat, Juice Shop), I identified and analyzed about twenty vulnerabilities across all 10 categories of the OWASP Top 10 2024: Broken Access Control, Cryptographic Failures, Injection (SQL, NoSQL), Insecure Design, Security Misconfiguration, Vulnerable Components, Authentication Failures, Software & Data Integrity Failures, Logging & Monitoring Failures, and SSRF.",
   "titlerightO1": "Patching & Verification",
-  "textrightO1": "Each detected vulnerability was manually reproduced, technically analyzed to understand its root cause, then fixed by modifying source code or server configuration. Fixes include adding security attributes to cookies, implementing prepared statements against injections, hardening HTTP headers, fixing CORS policies, and implementing CSRF protections. Each fix was re-tested with ZAP to confirm the mitigation."
+  "textrightO1": "Each detected vulnerability was manually reproduced, technically analyzed to understand its root cause, then fixed by modifying source code or server configuration. Fixes include adding security attributes to cookies, implementing prepared statements against injections, hardening HTTP headers, fixing CORS policies, and implementing CSRF protections. Each fix was re-tested with ZAP to confirm the mitigation.",
+
+  "notFoundMessage": "This page doesn't exist or has been moved.",
+  "notFoundLink": "Back to home"
 }

@@ -18,6 +18,7 @@ import Vulnhub from "./pages/Vulnhub.js";
 import Forensic from "./pages/Forensic.js";
 import Owasp from "./pages/Owasp.js";
 import Profilage from "./pages/Profilage.js";
+import NotFound from "./pages/NotFound.js";
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/Forensic" element={<Forensic />} />
           <Route path="/Owasp" element={<Owasp />} />
           <Route path="/Profilage" element={<Profilage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </ThemeProvider>
     </BrowserRouter>
