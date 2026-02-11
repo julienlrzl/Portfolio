@@ -176,6 +176,17 @@
   font-style: italic;
 }
 
+.t-hint {
+  color: #3a4550;
+  font-style: italic;
+  font-size: 0.85em;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #6A7A8B;
+  }
+}
+
 @keyframes blink-cursor {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }

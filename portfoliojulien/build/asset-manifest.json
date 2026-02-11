@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.d1c187b3.css",
-    "main.js": "./static/js/main.08ef3561.js",
+    "main.css": "./static/css/main.2c2c7a0b.css",
+    "main.js": "./static/js/main.7df64619.js",
     "static/media/jetty_2.png": "./static/media/jetty_2.992eddc7a15dc167b712.png",
     "static/media/sokoban.png": "./static/media/sokoban.9a0e3f2a592a88f175c1.png",
     "static/media/kibana-scenario.png": "./static/media/kibana-scenario.2f0d8540b8770d9f84e5.png",
@@ -30,11 +30,11 @@
     "static/media/europa-light-webfont.ttf": "./static/media/europa-light-webfont.d66543a9ebdebb6dfcea.ttf",
     "static/media/EuropaRegular.ttf": "./static/media/EuropaRegular.6f7af97cfd0baa472939.ttf",
     "index.html": "./index.html",
-    "main.d1c187b3.css.map": "./static/css/main.d1c187b3.css.map",
-    "main.08ef3561.js.map": "./static/js/main.08ef3561.js.map"
+    "main.2c2c7a0b.css.map": "./static/css/main.2c2c7a0b.css.map",
+    "main.7df64619.js.map": "./static/js/main.7df64619.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1c187b3.css",
-    "static/js/main.08ef3561.js"
+    "static/css/main.2c2c7a0b.css",
+    "static/js/main.7df64619.js"
   ]
 }
