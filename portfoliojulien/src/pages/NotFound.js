@@ -375,6 +375,8 @@ const NotFound = () => {
                   {animationDone ? (
                     <span className="notfound-line notfound-input-line">
                       <PromptSpan cwd={cwd} />
+                      <span className="t-cmd">{inputValue}</span>
+                      <span className="t-block-cursor"></span>
                       <form onSubmit={handleSubmit} className="terminal-form">
                         <input
                           ref={inputRef}
