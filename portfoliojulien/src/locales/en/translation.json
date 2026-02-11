@@ -118,5 +118,6 @@
   "textrightO1": "Each detected vulnerability was manually reproduced, technically analyzed to understand its root cause, then fixed by modifying source code or server configuration. Fixes include adding security attributes to cookies, implementing prepared statements against injections, hardening HTTP headers, fixing CORS policies, and implementing CSRF protections. Each fix was re-tested with ZAP to confirm the mitigation.",
 
   "notFoundMessage": "This page doesn't exist or has been moved.",
+  "notFoundReopen": "Relaunch terminal",
   "notFoundLink": "Back to home"
 }

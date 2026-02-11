@@ -117,5 +117,6 @@
   "textrightO1": "Chaque vulnérabilité détectée a été reproduite manuellement, analysée techniquement pour en comprendre la cause, puis corrigée par modification du code source ou de la configuration serveur. Les correctifs incluent l'ajout d'attributs de sécurité sur les cookies, la mise en place de requêtes préparées contre les injections, le renforcement des en-têtes HTTP, la correction des politiques CORS, et l'implémentation de protections CSRF. Chaque correction a été re-testée avec ZAP pour confirmer la mitigation.",
 
   "notFoundMessage": "Cette page n'existe pas ou a été déplacée.",
+  "notFoundReopen": "Relancer le terminal",
   "notFoundLink": "Retour à l'accueil"
 }

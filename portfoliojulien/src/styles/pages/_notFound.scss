@@ -31,55 +31,222 @@
   opacity: 0.7;
 }
 
+// Terminal window — reuses .terminal-header, .terminal-dots,
+// .terminal-dot, .dot-red/yellow/green, .dot-icon from _about.scss
 .not-found-terminal {
-  font-family: $font-code;
-  font-size: 0.85rem;
-  text-align: left;
   width: 100%;
-  max-width: 480px;
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-  padding: 1rem 1.2rem;
-  min-height: 180px;
+  max-width: 650px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(15, 23, 42);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+  animation: terminalOpen 0.4s ease;
+  transform-origin: center top;
 
-  .dark-mode & {
-    background: rgba(0, 0, 0, 0.4);
-    border-color: rgba(255, 255, 255, 0.08);
-  }
-
-  p {
-    margin: 0;
-    line-height: 1.8;
-    animation: terminalFadeIn 0.3s ease;
+  .dot-red {
+    cursor: pointer;
+    border: none;
+    padding: 0;
   }
 }
 
-.terminal-cmd {
+.dark-mode .not-found-terminal {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(255, 119, 0, 0.04),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+// Wrapper for smooth collapse
+.terminal-wrapper {
+  max-height: 400px;
+  height: 400px;
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.4s ease,
+              margin 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.terminal-wrapper--closed {
+  max-height: 0;
+  height: 0;
+  opacity: 0;
+  margin-top: -1.5rem;
+}
+
+// Terminal content (scoped to 404 — reuses .terminal-pre,
+// .t-prompt, .t-sep, .t-path, .t-dollar, .t-cmd,
+// .t-output-header, .t-cursor from _about.scss)
+.not-found-terminal .terminal-body {
+  padding: 20px 24px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  cursor: text;
+
+  // Scrollbar styling
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+  }
+}
+
+.not-found-terminal .terminal-pre {
+  text-align: left;
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.notfound-line {
+  display: inline;
+}
+
+.notfound-line--hidden {
+  visibility: hidden;
+}
+
+.notfound-line--fade-in {
+  animation: terminalFadeIn 0.4s ease;
+}
+
+// Interactive input line
+.notfound-input-line {
+  display: flex;
+  align-items: center;
+}
+
+.terminal-form {
+  display: inline;
+  flex: 1;
+}
+
+.terminal-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #e2e8f0;
+  font-family: $font-code;
+  font-size: inherit;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  caret-color: $accent;
+  line-height: inherit;
+}
+
+// ls output colors
+.t-ls-dir {
   color: $cyan;
+  font-weight: 600;
 }
 
-.terminal-output {
+.t-ls-file {
+  color: #e2e8f0;
+}
+
+// Flag display
+.t-flag {
   color: $accent;
-  opacity: 0.8;
-  padding-left: 1rem;
+  font-weight: 600;
 }
 
-.terminal-cursor {
+.t-flag-success {
+  animation: flagReveal 0.6s ease;
+}
+
+@keyframes flagReveal {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 20px $accent;
+  }
+  50% {
+    text-shadow: 0 0 10px $accent;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: none;
+  }
+}
+
+// Reopen wrapper — smooth expand
+.reopen-wrapper {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.15s,
+              opacity 0.4s ease 0.25s;
+}
+
+.reopen-wrapper--visible {
+  max-height: 60px;
+  opacity: 1;
+}
+
+// Reopen button
+.terminal-reopen {
+  font-family: $font-code;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: inherit;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+    border-color: $cyan;
+  }
+}
+
+.terminal-reopen__icon {
   color: $cyan;
-  animation: blink 0.7s step-end infinite;
+  font-weight: 600;
 }
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
+// Animations
 @keyframes terminalFadeIn {
   from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes terminalOpen {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+// Back link
 .not-found-link {
   font-family: $font-primary;
   color: $accent;
